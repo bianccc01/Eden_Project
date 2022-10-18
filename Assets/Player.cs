@@ -7,13 +7,17 @@
     {
         public float moveSpeed = 3f;
         private Vector2 moveInput;
+
+        private bool canMove = true;
         private Rigidbody2D rb;
 
         public int salute = 5;
 
         //Componenti per il salto
         private bool jump = false;
-        private bool move = true;
+
+        private bool contatto = false;
+    
         private bool isGrounded = false;
         public float jumpamount = 100; //altezza del salto
         public float gravityScale = 10; //Gravità per il salto verso l'alto
@@ -27,8 +31,11 @@
         void FixedUpdate()
         {
             //(EQUIVALENTE)     rb.velocity = new Vector2(moveInput.x * moveSpeed ,rb.velocity.y);
-            transform.Translate(moveInput * moveSpeed * Time.fixedDeltaTime);
-
+            if(canMove)
+            {
+                transform.Translate(moveInput * moveSpeed * Time.fixedDeltaTime);
+            }
+            
             PlayerJump();
         }
 
@@ -37,14 +44,14 @@
             if (theCollision.gameObject.tag == "Floor")
             {
                 isGrounded = true;
+                canMove = true;
             }
 
             if(theCollision.gameObject.tag == "Enemy")
             {
                 rb.AddForce(new Vector2(-1,2) * 20, ForceMode2D.Impulse);
             }
-
-
+            
         }
 
         private void OnCollisionExit2D(Collision2D theCollision)
@@ -56,11 +63,12 @@
 
             if(theCollision.gameObject.tag == "Enemy")
             {
-                
                 salute--;
                 print("ora ti rimangono "+ salute + " vite");
+                canMove = false;
             }
         }
+
 
 
         void OnMove(InputValue value)
@@ -104,7 +112,7 @@
                 jump = false;
             }
         }
-
-
-
     }
+
+
+    
