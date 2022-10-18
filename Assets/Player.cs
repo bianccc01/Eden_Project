@@ -19,7 +19,7 @@
         private bool contatto = false;
     
         private bool isGrounded = false;
-        public float jumpamount = 100; //altezza del salto
+        public float jumpamount = 100; //Altezza del salto
         public float gravityScale = 10; //Gravità per il salto verso l'alto
         public float fallingGravityScale = 40; //Gravità per la discesa verso il basso
 
