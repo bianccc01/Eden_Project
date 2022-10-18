@@ -39,6 +39,11 @@
                 isGrounded = true;
             }
 
+            if(theCollision.gameObject.tag == "Enemy")
+            {
+                rb.AddForce(new Vector2(-1,2) * 20, ForceMode2D.Impulse);
+            }
+
 
         }
 
@@ -51,6 +56,7 @@
 
             if(theCollision.gameObject.tag == "Enemy")
             {
+                
                 salute--;
                 print("ora ti rimangono "+ salute + " vite");
             }
