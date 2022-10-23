@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     public float velocitaNemico;
 
     Rigidbody2D rb;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,17 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.LookAt(player);
         transform.position = Vector2.Lerp(rb.position,player.transform.position,velocitaNemico * Time.fixedDeltaTime);
+        Vector3 characterScale = transform.localScale;
+        
+        if(player.transform.position.x < transform.position.x){
+            characterScale.x = 1;
+        }
+
+        if(player.transform.position.x > transform.position.x){
+            characterScale.x = -1;
+        }
+
+        transform.localScale = characterScale;
     }
 }

@@ -517,7 +517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6443839653177134429, guid: 2f8d7a67afe3f774688db6b014dd9b7a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0195
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6443839653177134429, guid: 2f8d7a67afe3f774688db6b014dd9b7a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -574,7 +574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 25697994520383419, guid: 3aa6f7eff3243c4498eb84427621c8c8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.92675227
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 25697994520383419, guid: 3aa6f7eff3243c4498eb84427621c8c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -631,6 +631,10 @@ PrefabInstance:
     - target: {fileID: 4245979585474138045, guid: 3aa6f7eff3243c4498eb84427621c8c8, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971171163866384822, guid: 3aa6f7eff3243c4498eb84427621c8c8, type: 3}
+      propertyPath: jumpamount
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 8810041818382694675, guid: 3aa6f7eff3243c4498eb84427621c8c8, type: 3}
       propertyPath: m_Mass
