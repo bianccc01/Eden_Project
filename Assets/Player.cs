@@ -37,6 +37,8 @@
             }
             
             PlayerJump();
+
+           
         }
 
         /*Funzione che viene richiamata appena entra in collisione con un oggetto*/
@@ -50,7 +52,9 @@
 
             if(theCollision.gameObject.tag == "Enemy")
             {
-                rb.AddForce(new Vector2(-1,2) * 20, ForceMode2D.Impulse);
+                rb.AddForce(new Vector2(-1,3) * 30, ForceMode2D.Impulse);
+                RefreshGravity();
+                isGrounded = false;
             }
             
         }
@@ -73,22 +77,23 @@
         }
 
 
-
+        /* Tasti (W,D)*/
         void OnMove(InputValue value)
         {
             moveInput = value.Get<Vector2>();
         }
 
-        void OnFire()
+        /*Left click*/
+         void OnFire()
         {
             print("fired ");
         }
 
+        /*Tasto: Spazio*/
         public void OnJump()
         {
             if (isGrounded == true)
             {
-                print("Jumping");
                 jump = true;
             }
         }
@@ -98,19 +103,36 @@
             if (jump == true && isGrounded == true)
             {
                 rb.AddForce(Vector2.up * jumpamount, ForceMode2D.Impulse);
-                
-                if (rb.velocity.y >= 0)
-                {
-                    rb.gravityScale = gravityScale;
-                }
-                else if (rb.velocity.y < 0)
-                {
-                    rb.gravityScale = fallingGravityScale;
-                }
+
+                RefreshGravity();
                 jump = false;
             }
         }
+    
+
+
+    private void RefreshGravity(){
+
+        if (rb.velocity.y >= 0)
+        {
+
+         rb.gravityScale = gravityScale;
+        
+        }
+        
+        else if (rb.velocity.y < 0)
+        {
+
+        rb.gravityScale = fallingGravityScale;
+        
+        }
+
+
     }
+
+    }
+
+
 
 
     
