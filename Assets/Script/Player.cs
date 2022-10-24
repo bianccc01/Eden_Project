@@ -14,7 +14,17 @@ public class Player : MonoBehaviour
     private bool canMove = true; //se colpito dal nemico il personaggio non potrà muoversi fino a che non tocca terra
 
 
-    public int salute = 5; //Test per un eventuale barra della salute
+    public int maxHealth = 200; //Test per un eventuale barra della salute
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
+
+    public int MaxOx = 100;
+
+    public int CurrentOx;
+
+    public HealthBar OxBar;
 
     /*Componenti per il salto*/
     private bool jump = false;
@@ -25,6 +35,10 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        currentHealth = maxHealth;
+        CurrentOx = MaxOx;
+        healthBar.SetMaxHealth(maxHealth);
+        OxBar.SetMaxHealth(MaxOx);
         rb = GetComponent<Rigidbody2D>(); //inizializzo le componenti necessarie per rendere il player un corpo rigido
     }
 
@@ -36,7 +50,10 @@ public class Player : MonoBehaviour
             PlayerMove();
         }
 
-        PlayerJump();
+            PlayerJump();
+
+            LessOx();
+
 
 
     }
@@ -70,8 +87,7 @@ public class Player : MonoBehaviour
 
         if (theCollision.gameObject.tag == "Enemy")
         {
-            salute--;
-            print("ora ti rimangono " + salute + " vite");
+            TakeDamage(5);
             canMove = false;
         }
     }
@@ -149,6 +165,18 @@ public class Player : MonoBehaviour
         }
 
 
+    }
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
+
+    void LessOx()
+    {
+        CurrentOx -= 1;
+        OxBar.SetHealth(CurrentOx);
     }
 
 }
