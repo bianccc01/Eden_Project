@@ -8,7 +8,7 @@ public class esploratore : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float moveSpeed = 0.1f;
-    private Vector2 moveImput; 
+    private Vector2 moveInput; 
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +18,26 @@ public class esploratore : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-       transform.Translate(moveImput*moveSpeed*Time.fixedDeltaTime);
+       transform.Translate(moveInput*moveSpeed*Time.fixedDeltaTime);
+
+        Vector3 characterScale = transform.localScale;
+
+        if (moveInput.x > 0)
+        {
+            characterScale.x = 1;
+        }
+
+        if (moveInput.x < 0)
+        {
+            characterScale.x = -1;
+        }
+
+        transform.localScale = characterScale;
 
     }
 
    void OnMove(InputValue value)
     {
-        moveImput = value.Get<Vector2>();
+        moveInput = value.Get<Vector2>();
     }
 }
