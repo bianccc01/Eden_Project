@@ -24,12 +24,12 @@ public class esploratore : MonoBehaviour
 
         if (moveInput.x > 0)
         {
-            characterScale.x = 1;
+            characterScale.x = 0.75f;
         }
 
         if (moveInput.x < 0)
         {
-            characterScale.x = -1;
+            characterScale.x = -0.75f;
         }
 
         transform.localScale = characterScale;
