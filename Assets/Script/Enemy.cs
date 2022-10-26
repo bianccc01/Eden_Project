@@ -22,7 +22,8 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.Lerp(rb.position,new Vector2(player.transform.position.x,0.0f),moltiplicatoreDifficolta* velocitaNemico * Time.fixedDeltaTime);
+        transform.position = Vector2.Lerp(rb.position,new Vector2(player.transform.position.x,(-3.52f)),moltiplicatoreDifficolta* velocitaNemico * Time.fixedDeltaTime);
+        
         Vector3 characterScale = transform.localScale;
         
         if(player.transform.position.x < transform.position.x){
