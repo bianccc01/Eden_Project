@@ -4940,4 +4940,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 465033710}
   moltiplicatoreDifficolta: 1
-  velocitaNemico: 0.5
+  velocitaNemico: 0.01
