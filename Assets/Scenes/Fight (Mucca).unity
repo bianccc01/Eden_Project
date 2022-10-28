@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &9522216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 209860661029914779, guid: 3aa6f7eff3243c4498eb84427621c8c8, type: 3}
+  m_PrefabInstance: {fileID: 753375404}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &85030468
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +268,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 25697994520383419, guid: 3aa6f7eff3243c4498eb84427621c8c8, type: 3}
   m_PrefabInstance: {fileID: 753375404}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &96679029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9522216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688a42ee8e076ff4b83996b9865cdba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPos: {fileID: 1243843572}
+  bullet: {fileID: 5784798167838374688, guid: 500e3d24bbf4ef24e8e2e4c14f44270c, type: 3}
+  shoot: 0
 --- !u!1 &145904557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,6 +1341,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237559539}
   m_CullTransparentMesh: 1
+--- !u!1 &1243843571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1243843572}
+  m_Layer: 0
+  m_Name: SpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1243843572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243843571}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.22, y: 1.98, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1442812217}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1305768657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,6 +1477,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1305768659}
+--- !u!4 &1442812217 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6398118959787346063, guid: 3aa6f7eff3243c4498eb84427621c8c8, type: 3}
+  m_PrefabInstance: {fileID: 753375404}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1443412485
 GameObject:
   m_ObjectHideFlags: 0

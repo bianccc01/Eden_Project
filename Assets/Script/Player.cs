@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
     public float gravityScale = 10; //Gravità per il salto verso l'alto
     public float fallingGravityScale = 40; //Gravità per la discesa verso il basso
 
+
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -98,13 +100,7 @@ public class Player : MonoBehaviour
     {
         moveInput = value.Get<Vector2>();
     }
-
-    /*Left click*/
-    void OnFire()
-    {
-        print("fired ");
-    }
-
+ 
     /*Tasto: Spazio*/
     public void OnJump()
     {
