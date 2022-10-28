@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy_explorer : MonoBehaviour
 {
     public Transform player;
     public float moltiplicatoreDifficolta = 1f; //Temporaneo
