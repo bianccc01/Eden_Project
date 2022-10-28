@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
         
     }
 
-    void OntriggerEnter(Collision other) {
+    void OnTriggerEnter(Collider other) {
 
        print("Collisione avvenuta ");
 
