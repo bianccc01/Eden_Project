@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     private bool canMove = true; //se colpito dal nemico il personaggio non potrà muoversi fino a che non tocca terra
 
 
-    public int maxHealth = 200; //Test per un eventuale barra della salute
+    public int maxHealth = 200; 
     public int currentHealth;
 
     public HealthBar healthBar;
@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
 
         if (theCollision.gameObject.tag == "Enemy")
         {
-            rb.AddForce(new Vector2(-1, 3) * 30, ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(-(transform.localScale.x), 3) * 30, ForceMode2D.Impulse);
             RefreshGravity();
             isGrounded = false;
         }

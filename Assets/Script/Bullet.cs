@@ -21,11 +21,9 @@ public class Bullet : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other) {
-
-       print("Collisione avvenuta ");
-
-       Destroy(this.gameObject);
+    private void OnTriggerEnter2D(Collider2D other) {
+        Destroy(gameObject);
+        print("Collisione avvenuta ");
     }
 
 }
