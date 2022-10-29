@@ -151,7 +151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13470711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.88, y: -0.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -430,7 +430,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -984,13 +984,17 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 19a9340e5a8692243aad12a1b9456d7e, type: 2}
   - m_RefCount: 53
     m_Data: {fileID: 11400000, guid: 426c0a7539d25b64d863b383f680de3b, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 22
     m_Data: {fileID: 504318113, guid: 8e6c04c2d36fc5a4fb0fcfad54a4b1be, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1028768921, guid: 8e6c04c2d36fc5a4fb0fcfad54a4b1be, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 53
     m_Data: {fileID: -2056447112, guid: 8e6c04c2d36fc5a4fb0fcfad54a4b1be, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1028768921, guid: 8e6c04c2d36fc5a4fb0fcfad54a4b1be, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 76
     m_Data:
@@ -1017,7 +1021,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -11, y: -5, z: 0}
-  m_Size: {x: 23, y: 10, z: 1}
+  m_Size: {x: 34, y: 15, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1798,7 +1802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116099504}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4940,4 +4944,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 465033710}
   moltiplicatoreDifficolta: 1
-  velocitaNemico: 0.5
+  velocitaNemico: 0.01
