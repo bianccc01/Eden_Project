@@ -8044,4 +8044,4 @@ MonoBehaviour:
   pb4: 0
   Distance: 10
   moltiplicatoreDifficolta: 1
-  velocitaNemico: 1
+  velocitaNemico: 0.1
