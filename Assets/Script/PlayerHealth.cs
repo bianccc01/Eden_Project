@@ -40,13 +40,13 @@ public class PlayerHealth : MonoBehaviour
         {
             if(currentHealth > 0)
             {
-                currentHealth-=1;
+                currentHealth-=0.05f;
             }
             lifebar.SetCurrentHealth(currentHealth);
             
             if (maxHealth > 0)
             {
-                maxHealth -= 1;
+                maxHealth -= 0.01f;
             }
             
             lifebar.SetMaxHealth(maxHealth);
@@ -75,11 +75,10 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
-    public void OnRegenerate()
+    void OnRegenerate()
     {
         lifebar.SetCurrentHealth(maxHealth);
     }
-
 
     private void OnCollisionExit2D(Collision2D theCollision)
     {

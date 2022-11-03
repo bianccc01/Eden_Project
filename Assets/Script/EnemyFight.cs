@@ -13,10 +13,9 @@ public class EnemyFight : MonoBehaviour
 
     public HealthBar healthBar;
 
-
-   
-
     Rigidbody2D rb;
+
+    Vector3 characterScale;
     
     
     // Start is called before the first frame update
@@ -30,19 +29,41 @@ public class EnemyFight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.Lerp(rb.position,new Vector2(player.transform.position.x,(-3.52f)),moltiplicatoreDifficolta* velocitaNemico * Time.fixedDeltaTime);
-        
-        Vector3 characterScale = transform.localScale;
-        
-        if(player.transform.position.x < transform.position.x){
+
+
+        characterScale = transform.localScale;
+
+        if(player.position.y >  rb.position.y + 2.40f)
+        {
+            if(rb.position.x <= -8 || rb.position.x >= 9)
+            {
+                characterScale.x = characterScale.x * (-1);
+            }
+            transform.position = Vector2.MoveTowards(rb.position,
+            new Vector2(transform.position.x + (characterScale.x * (-4)) ,rb.position.y),
+            moltiplicatoreDifficolta* velocitaNemico * Time.fixedDeltaTime);
+        }
+
+        else 
+        {
+            transform.position = Vector2.MoveTowards(rb.position,new Vector2(player.transform.position.x,rb.position.y),
+            moltiplicatoreDifficolta * velocitaNemico * Time.fixedDeltaTime);
+
+            if(player.transform.position.x < transform.position.x){
             characterScale.x = 1;
         }
 
-        if(player.transform.position.x > transform.position.x){
+            if(player.transform.position.x > transform.position.x){
             characterScale.x = -1;
         }
 
+        
+        }
+
         transform.localScale = characterScale;
+        
+        
+       
 
 
         if(currentHealth == 0)
@@ -62,5 +83,13 @@ public class EnemyFight : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        
+        if (other.gameObject.tag == "Wall")
+        {
+            characterScale.x = characterScale.x * (-1);
+        }
     }
 }
