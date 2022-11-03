@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu_opzioni.unity
     guid: 43a663dc70d9d3649865bcc9c743cf96
   - enabled: 1
-    path: Assets/Scenes/Menu Personaggio.unity
+    path: Assets/Scenes/MenuPersonaggio.unity
     guid: 1cb38eb5b9d7c0a48818b15815075045
   - enabled: 1
     path: Assets/Scenes/Esplorazione.unity
