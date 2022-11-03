@@ -13,20 +13,6 @@ public class Player : MonoBehaviour
     private Vector2 moveInput; //Direzione stabilita dall'input dell'utente
     private bool canMove = true; //se colpito dal nemico il personaggio non potrà muoversi fino a che non tocca terra
 
-    
-    public HealthBar healthBar;
-    public int maxHealth = 200; 
-    public int currentHealth;
-
-   
-
-
-    public int MaxOx = 100;
-
-    public int CurrentOx;
-
-    public HealthBar OxBar;
-
     /*Componenti per il salto*/
     private bool jump = false;
     private bool isGrounded = false;
@@ -38,10 +24,6 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        currentHealth = maxHealth;
-        CurrentOx = MaxOx;
-        healthBar.SetMaxHealth(maxHealth);
-        OxBar.SetMaxHealth(MaxOx);
         rb = GetComponent<Rigidbody2D>(); //inizializzo le componenti necessarie per rendere il player un corpo rigido
     }
 
@@ -53,10 +35,9 @@ public class Player : MonoBehaviour
             PlayerMove();
         }
 
-            PlayerJump();
-            LessOx();
 
-            RefreshMaxHealth();
+            PlayerJump();
+            
             
         }
 
@@ -98,7 +79,6 @@ public class Player : MonoBehaviour
 
         if (theCollision.gameObject.tag == "Enemy")
         {
-            TakeDamage(5);
             canMove = false;
         }
     }
@@ -120,10 +100,7 @@ public class Player : MonoBehaviour
     }
 
 
-    public void OnRegenerate()
-    {
-        healthBar.SetHealth(maxHealth);
-    }
+    
 
     private void PlayerJump()
     {
@@ -178,36 +155,12 @@ public class Player : MonoBehaviour
 
     }
 
-    void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
-    }
+    
 
-    void LessOx()
-    {
-        if(CurrentOx <= 0)
-        {
-            OxBar.SetHealth(0);
-        }
-        else 
-        {
-            CurrentOx -= 10;
-            OxBar.SetHealth(CurrentOx);
-        }
-    }
+    
 
 
-    void RefreshMaxHealth()
-    {
-        if (CurrentOx == 0f)
-        {
-            currentHealth-=1;
-            healthBar.SetHealth(currentHealth);
-            maxHealth -= 1;
-        }
-        
-    }
+    
 
 }
 
