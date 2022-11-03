@@ -10,6 +10,10 @@ public class PlayerAttack : MonoBehaviour
 
     private float time = 1.5f;
 
+    private float timeReload;
+
+    private int bullets;
+
     public bool shoot = false;
 
     // Update is called once per frame
@@ -18,9 +22,16 @@ public class PlayerAttack : MonoBehaviour
 
         time += Time.fixedDeltaTime;
 
-        if (shoot)
+        if (bullets == 6)
+        {
+            Reload();
+            shoot = false;
+        }
+
+        if (shoot && bullets < 6)
         {
             Instantiate(bullet, spawnPos.position, spawnPos.rotation);
+            bullets++;
             shoot = false;
         }
         
@@ -30,11 +41,22 @@ public class PlayerAttack : MonoBehaviour
     /*Left click*/
     void OnShoot()
     {
-        if(time>=1.5f)
+        if(time>=0.5f)
         {
             shoot = true;
             time = 0f;
         }
         
+    }
+
+    void Reload()
+    {
+        timeReload += Time.fixedDeltaTime;
+        if(timeReload >= 3f)
+        {
+            bullets = 0;
+            timeReload = 0;
+            print("Reload finito !");
+        }
     }
 }
