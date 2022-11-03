@@ -22,6 +22,9 @@ public class Enemy_explorer : MonoBehaviour
     public float velocitaNemico;
 
 
+    Vector3 characterScale;
+
+
 
     Rigidbody2D rb;
 
@@ -34,6 +37,8 @@ public class Enemy_explorer : MonoBehaviour
         pb2 = false;
         pb3 = false;
         pb4 = false;
+
+        characterScale = transform.localScale;
     }
 
     // Update is called once per frame
@@ -44,12 +49,10 @@ public class Enemy_explorer : MonoBehaviour
         float Ex = transform.position.x;
         float Ey = transform.position.y;
 
-        // se il giocatore è più vicino di una certa distanza lo inseguo
+        // se il giocatore e piu vicino di una certa distanza lo inseguo
         if ((Px - Ex) * (Px - Ex) + (Py - Ey) * (Py - Ey) < Distance)
         {
             transform.position = Vector2.Lerp(rb.position, player.transform.position, moltiplicatoreDifficolta * velocitaNemico * Time.fixedDeltaTime);
-
-            Vector3 characterScale = transform.localScale;
 
             if (player.transform.position.x < transform.position.x)
             {
@@ -63,12 +66,13 @@ public class Enemy_explorer : MonoBehaviour
 
             transform.localScale = characterScale;
         }
-        //quando il giocatore è più distante di un tot l'animale si muove in circolo su 4 punti 
+        //quando il giocatore ï¿½ piï¿½ distante di un tot l'animale si muove in circolo su 4 punti 
         else
         {
-            //se è appena stato nel punto 1 -> va nel punto 2
+            //se ï¿½ appena stato nel punto 1 -> va nel punto 2
             if (pb1)
             {
+                voltaNemico(rb.position.x,p2);
                 transform.position = Vector2.MoveTowards(rb.position, p2, velocitaNemico * Time.fixedDeltaTime);
                 if (rb.position == p2)
                 {
@@ -79,6 +83,7 @@ public class Enemy_explorer : MonoBehaviour
 
             if (pb2)
             {
+                voltaNemico(rb.position.x,p3);
                 transform.position = Vector2.MoveTowards(rb.position, p3, velocitaNemico * Time.fixedDeltaTime);
                 if (rb.position == p3)
                 {
@@ -89,6 +94,7 @@ public class Enemy_explorer : MonoBehaviour
 
             if (pb3)
             {
+                voltaNemico(rb.position.x,p4);
                 transform.position = Vector2.MoveTowards(rb.position, p4, velocitaNemico * Time.fixedDeltaTime);
                 if (rb.position == p4)
                 {
@@ -99,6 +105,7 @@ public class Enemy_explorer : MonoBehaviour
 
             if (pb4)
             {
+                voltaNemico(rb.position.x,p1);
                 transform.position = Vector2.MoveTowards(rb.position, p1, velocitaNemico * Time.fixedDeltaTime);
                 if (rb.position == p1)
                 {
@@ -106,6 +113,21 @@ public class Enemy_explorer : MonoBehaviour
                     pb1 = true;
                 }
             }
+        }
+    }
+
+
+    private void voltaNemico(float x, Vector2 p){
+        if (x < p.x && characterScale.x == 0.75f)
+        {
+            characterScale.x = -0.75f;
+            transform.localScale = characterScale;
+        }
+
+        if (x > p.x && characterScale.x == -0.75f)
+        {
+            characterScale.x = 0.75f;
+            transform.localScale = characterScale;
         }
     }
 }

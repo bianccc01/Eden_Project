@@ -7294,11 +7294,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6443839653177134429, guid: 2f8d7a67afe3f774688db6b014dd9b7a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.32
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 6443839653177134429, guid: 2f8d7a67afe3f774688db6b014dd9b7a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.02
+      value: -1.26
       objectReference: {fileID: 0}
     - target: {fileID: 6443839653177134429, guid: 2f8d7a67afe3f774688db6b014dd9b7a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8030,7 +8030,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2108211374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db283488138bd44db55c5e4575d8852, type: 3}
+  m_Script: {fileID: 11500000, guid: 6636f2f79c263d54b83cd5096b349673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 465033710}
@@ -8042,6 +8042,6 @@ MonoBehaviour:
   pb2: 0
   pb3: 0
   pb4: 0
-  Distance: 10
+  Distance: 0
   moltiplicatoreDifficolta: 1
   velocitaNemico: 1
