@@ -122,12 +122,12 @@ public class Player : MonoBehaviour
 
         if (moveInput.x > 0)
         {
-            characterScale.x = 1;
+            characterScale.x = 0.9f;
         }
 
         if (moveInput.x < 0)
         {
-            characterScale.x = -1;
+            characterScale.x = -0.9f;
         }
 
         transform.localScale = characterScale;

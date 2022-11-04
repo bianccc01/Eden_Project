@@ -35,7 +35,7 @@ public class EnemyFight : MonoBehaviour
 
         if(player.position.y >  rb.position.y + 2.40f)
         {
-            if(rb.position.x <= -8 || rb.position.x >= 9)
+            if(rb.position.x <= -17 || rb.position.x >= 9)
             {
                 characterScale.x = characterScale.x * (-1);
             }
@@ -50,11 +50,11 @@ public class EnemyFight : MonoBehaviour
             moltiplicatoreDifficolta * velocitaNemico * Time.fixedDeltaTime);
 
             if(player.transform.position.x < transform.position.x){
-            characterScale.x = 1;
+            characterScale.x = 0.9f;
         }
 
             if(player.transform.position.x > transform.position.x){
-            characterScale.x = -1;
+            characterScale.x = -0.9f;
         }
 
         
