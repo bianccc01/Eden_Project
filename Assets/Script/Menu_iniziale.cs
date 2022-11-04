@@ -5,29 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class Menu_iniziale : MonoBehaviour
 {
+    public void Button_Registarzione_Indietro()
+    {
+        SceneManager.LoadScene(0);
+    }
 
     public void Button_Play()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(5);
     }
 
     public void Button_Opzioni()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
 
     public void Button_Esci()
     {
         Application.Quit();
     }
-    public void Button_Indietro()
+    public void Button_Opzioni_Indietro()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
 
     public void Button_Personaggio()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(4);
     }
 
 
