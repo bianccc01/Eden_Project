@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class esploratore : MonoBehaviour
 {
@@ -35,9 +36,19 @@ public class esploratore : MonoBehaviour
         transform.localScale = characterScale;
 
     }
-
-   void OnMove(InputValue value)
+   
+    //viene chiamato quando si effettuano collisioni 
+    private void OnCollisionEnter2D(Collision2D theCollision)
     {
+        if (theCollision.gameObject.tag == "Enemy")
+        {
+            SceneManager.LoadScene(7);
+        }
+    }
+
+    void OnMove(InputValue value)
+    {
+        
         moveInput = value.Get<Vector2>();
     }
 }
