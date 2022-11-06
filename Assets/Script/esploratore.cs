@@ -42,7 +42,7 @@ public class esploratore : MonoBehaviour
     {
         if (theCollision.gameObject.tag == "Enemy")
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(6);
         }
     }
 
