@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using System;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar OxBar;
 
+    private characterStats cs;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +27,13 @@ public class PlayerHealth : MonoBehaviour
         lifebar.SetCurrentHealth(maxHealth);
         CurrentOx = MaxOx;
         OxBar.SetMaxHealth(MaxOx);
+
+        cs = new characterStats();
+        cs.setCurrentHealth(currentHealth);
+        cs.setMaxHealth(maxHealth);
+        cs.setCurrentOx(CurrentOx);
+        cs.setMaxOx(MaxOx);
+
     }
 
     // Update is called once per frame
@@ -35,6 +45,10 @@ public class PlayerHealth : MonoBehaviour
         }
         LessOx();
         RefreshMaxHealth();
+
+        cs.setCurrentHealth(currentHealth);
+        cs.setMaxHealth(maxHealth);
+       
     }
 
 
@@ -76,6 +90,7 @@ public class PlayerHealth : MonoBehaviour
     void OnRegenerate()
     {
         lifebar.SetCurrentHealth(maxHealth);
+        
     }
 
     private void OnCollisionExit2D(Collision2D theCollision)
