@@ -1235,7 +1235,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1074092882}
         m_TargetAssemblyTypeName: Menu_iniziale, Assembly-CSharp
-        m_MethodName: Button_Indietro
+        m_MethodName: Button_Opzioni_Indietro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
