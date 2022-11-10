@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyFight : MonoBehaviour
 {
@@ -69,6 +70,8 @@ public class EnemyFight : MonoBehaviour
         if(currentHealth == 0)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene(5);
+        
         }
     }
 
