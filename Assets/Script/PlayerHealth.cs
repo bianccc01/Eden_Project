@@ -7,12 +7,12 @@ public class PlayerHealth : MonoBehaviour
 {
 
     public Lifebar lifebar;
-    public float maxHealth = 250f; 
-    public float currentHealth;
+    static float maxHealth = 250f; 
+    static float currentHealth = 200;
 
-     public float MaxOx = 100;
+    public float MaxOx = 100;
 
-    public float CurrentOx;
+    static float CurrentOx;
 
     public HealthBar OxBar;
 
@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         lifebar.SetMaxHealth(maxHealth);
-        lifebar.SetCurrentHealth(maxHealth);
+        lifebar.SetCurrentHealth(currentHealth);
         CurrentOx = MaxOx;
         OxBar.SetMaxHealth(MaxOx);
 
@@ -39,10 +39,12 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        lifebar.SetCurrentHealth(currentHealth);
         if(currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
+
         LessOx();
         RefreshMaxHealth();
 

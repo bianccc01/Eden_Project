@@ -34,5 +34,10 @@ public class Menu_iniziale : MonoBehaviour
         SceneManager.LoadScene(4);
     }
 
+    public void Button_Per_Registrazione()
+    {
+        SceneManager.LoadScene(1);
+    }
+
 
 }
