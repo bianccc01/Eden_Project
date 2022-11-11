@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar OxBar;
 
-    private characterStats cs;
+    //private characterStats cs;
 
 
     // Start is called before the first frame update
@@ -28,11 +28,11 @@ public class PlayerHealth : MonoBehaviour
         CurrentOx = MaxOx;
         OxBar.SetMaxHealth(MaxOx);
 
-        cs = new characterStats();
+       /* cs = new characterStats();
         cs.setCurrentHealth(currentHealth);
         cs.setMaxHealth(maxHealth);
         cs.setCurrentOx(CurrentOx);
-        cs.setMaxOx(MaxOx);
+        cs.setMaxOx(MaxOx);*/
 
     }
 
@@ -46,8 +46,8 @@ public class PlayerHealth : MonoBehaviour
         LessOx();
         RefreshMaxHealth();
 
-        cs.setCurrentHealth(currentHealth);
-        cs.setMaxHealth(maxHealth);
+        /*cs.setCurrentHealth(currentHealth);
+        cs.setMaxHealth(maxHealth);*/
        
     }
 
