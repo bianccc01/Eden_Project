@@ -14,6 +14,10 @@ public class PlayerAttack : MonoBehaviour
 
     private int bullets;
 
+    private float timer;
+
+    public int TotalAmmo = 20;
+
     public bool shoot = false;
 
     // Update is called once per frame
@@ -22,11 +26,14 @@ public class PlayerAttack : MonoBehaviour
 
         time += Time.fixedDeltaTime;
 
-        if (bullets == 6)
+        if (bullets == 6 && TotalAmmo > 0)
         {
             Reload();
+            timer+=Time.fixedDeltaTime;
             shoot = false;
         }
+
+        timer = 0f;
 
         if (shoot && bullets < 6)
         {
@@ -52,11 +59,36 @@ public class PlayerAttack : MonoBehaviour
     void Reload()
     {
         timeReload += Time.fixedDeltaTime;
-        if(timeReload >= 3f)
+        if(timeReload >= 3f && TotalAmmo>=6)
         {
             bullets = 0;
             timeReload = 0;
             print("Reload finito !");
+            TotalAmmo -=6;
         }
+
+       else if(timeReload >= 3f && TotalAmmo > 0)
+        {
+            bullets = (6-TotalAmmo);
+            timeReload = 0;
+            print("Reload finito !");
+            TotalAmmo = 0;
+        }
+    }
+
+
+    public int GetCurrentAmmo()
+    {
+        return 6-this.bullets;
+    }
+
+    public int GetTotalAmmo()
+    {
+        return this.TotalAmmo;
+    }
+
+    public float GetTime()
+    {
+        return 3f-this.timer;
     }
 }

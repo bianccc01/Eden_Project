@@ -34,7 +34,7 @@ public class EnemyFight : MonoBehaviour
 
         characterScale = transform.localScale;
 
-        if(player.position.y >  rb.position.y + 2.40f)
+        if(player.position.y >  rb.position.y + 0.40f)
         {
             if(rb.position.x <= -17 || rb.position.x >= 9)
             {

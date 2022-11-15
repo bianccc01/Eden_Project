@@ -50,7 +50,6 @@ public class esploratore : MonoBehaviour
 
     void OnMove(InputValue value)
     {
-        
         moveInput = value.Get<Vector2>();
     }
 }

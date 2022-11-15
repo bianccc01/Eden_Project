@@ -7,11 +7,11 @@ using System;
 
 public class characterStats : MonoBehaviour
 {
-    public float maxHealth = 250f;
+    public float maxHealth;
     public float currentHealth;
     public TMP_Text maxHealthText;
     public TMP_Text currentHealthText;
-    public float maxOx = 100;
+    public float maxOx = 100f;
     public float currentOx;
     public TMP_Text maxOxText;
     public TMP_Text currentOxText;
@@ -20,8 +20,9 @@ public class characterStats : MonoBehaviour
 
     void Start()
     {
-        currentHealth = maxHealth;
-        currentOx = maxOx;
+        currentHealth = PlayerPrefs.GetFloat("CurrentHealth");
+        currentOx = (int)PlayerPrefs.GetFloat("Ossigeno");
+        maxHealth = PlayerPrefs.GetFloat("MaxHealth");
         UpdateStats();
     }
 
