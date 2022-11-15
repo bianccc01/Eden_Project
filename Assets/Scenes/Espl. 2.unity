@@ -3051,10 +3051,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifebar: {fileID: 1285112062}
   maxHealth: 250
-  currentHealth: 250
+  currentHealth: 200
   MaxOx: 100
   CurrentOx: 100
   OxBar: {fileID: 1596955080}
+--- !u!114 &1537198061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537198053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff8f8927e5e6d14c8f869b84f77642a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Osbar: {fileID: 1596955080}
+  lifebar: {fileID: 1285112062}
 --- !u!114 &1596955080 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2501198811935880354, guid: 6eea94a6e8e1ade41b9f14e44c456ac2, type: 3}
@@ -3175,6 +3189,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501198811759854234, guid: 6eea94a6e8e1ade41b9f14e44c456ac2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501198811935880365, guid: 6eea94a6e8e1ade41b9f14e44c456ac2, type: 3}
+      propertyPath: m_Value
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501198811935880365, guid: 6eea94a6e8e1ade41b9f14e44c456ac2, type: 3}
+      propertyPath: m_MaxValue
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501198811935880365, guid: 6eea94a6e8e1ade41b9f14e44c456ac2, type: 3}
+      propertyPath: m_WholeNumbers
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2501198812065692792, guid: 6eea94a6e8e1ade41b9f14e44c456ac2, type: 3}

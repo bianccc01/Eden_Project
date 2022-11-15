@@ -9,8 +9,6 @@ public class Lifebar : MonoBehaviour
 
     public Slider sliderHealth;
 
-    void Awake() { DontDestroyOnLoad(transform.gameObject); } 
-
     public void SetMaxHealth(float health)
     {
         sliderMaxHealth.value = health;
@@ -28,5 +26,10 @@ public class Lifebar : MonoBehaviour
     public float getMaxValue()
     {
         return sliderMaxHealth.value;
+    }
+
+    public float getHealthLife()
+    {
+        return sliderHealth.value;
     }
 }

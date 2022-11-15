@@ -7,23 +7,24 @@ public class PlayerHealth : MonoBehaviour
 {
 
     public Lifebar lifebar;
-    static float maxHealth = 250f; 
-    static float currentHealth = 200;
+    public float maxHealth = 250f; 
+    public float currentHealth = 200;
 
     public float MaxOx = 100;
 
-    static float CurrentOx = 100;
+    public float CurrentOx = 100f;
 
     public HealthBar OxBar;
 
     //private characterStats cs;
 
 
-     void OnDisable() { PlayerPrefs.SetFloat("score", CurrentOx); 
-      PlayerPrefs.Save();
-      } 
-
-     void OnEnable() { CurrentOx = PlayerPrefs.GetFloat("score"); } 
+    void OnEnable() 
+    { 
+        CurrentOx = PlayerPrefs.GetFloat("Ossigeno");
+        maxHealth = PlayerPrefs.GetFloat("MaxHealth");
+        currentHealth = PlayerPrefs.GetFloat("CurrentHealth"); 
+    } 
 
 
     // Start is called before the first frame update
@@ -84,7 +85,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else 
         {
-            CurrentOx -= 0.01f;
+            CurrentOx -= 0.005f;
             OxBar.SetHealth(CurrentOx);
         }
     }

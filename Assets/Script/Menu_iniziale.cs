@@ -12,7 +12,10 @@ public class Menu_iniziale : MonoBehaviour
 
     public void Button_Play()
     {
-        SceneManager.LoadScene(5);
+       PlayerPrefs.SetFloat("Ossigeno",100f);
+       PlayerPrefs.SetFloat("MaxHealth", 250f);
+       PlayerPrefs.SetFloat("CurrentHealth",250f);
+       SceneManager.LoadScene(5);
     }
 
     public void Button_Opzioni()
