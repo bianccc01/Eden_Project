@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using System;
+
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar OxBar;
 
-    //private characterStats cs;
+   
 
 
     void OnEnable() 
@@ -35,11 +35,7 @@ public class PlayerHealth : MonoBehaviour
         lifebar.SetCurrentHealth(currentHealth);
         OxBar.SetMaxHealth(MaxOx);
 
-       /* cs = new characterStats();
-        cs.setCurrentHealth(currentHealth);
-        cs.setMaxHealth(maxHealth);
-        cs.setCurrentOx(CurrentOx);
-        cs.setMaxOx(MaxOx);*/
+      
 
     }
 
@@ -57,8 +53,6 @@ public class PlayerHealth : MonoBehaviour
         LessOx();
         RefreshMaxHealth();
 
-        /*cs.setCurrentHealth(currentHealth);
-        cs.setMaxHealth(maxHealth);*/
        
     }
 
