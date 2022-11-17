@@ -52,7 +52,7 @@ public class Signin_Login : MonoBehaviour
 
     void OnErrorRegister(PlayFabError error)
     {
-        messaggio.text = "Account non creato!";
+        messaggio.text = "Account non creato! Username o email già in uso.";
         Debug.Log($"Account non creato!\n {error.GenerateErrorReport()}");
     }
 
@@ -70,8 +70,8 @@ public class Signin_Login : MonoBehaviour
 
     void OnLoginSuccess(LoginResult result)
     {
-        messaggio.text = "Premi START per iniziare!";
         Debug.Log($"Log in");
+        SceneManager.LoadScene(2);
     }
 
     void OnErrorLogin(PlayFabError error)
@@ -84,7 +84,22 @@ public class Signin_Login : MonoBehaviour
 
     public void Button_Reset()
     {
+        var request = new SendAccountRecoveryEmailRequest
+        {
+            Email = emailR.text,
+            TitleId = "7C914"
+        };
+        PlayFabClientAPI.SendAccountRecoveryEmail(request, OnPasswordReset, OnErrorPassword);
+    }
 
+    void OnPasswordReset(SendAccountRecoveryEmailResult result)
+    {
+        messaggio.text = "Email per il reset password inviata!";
+    }
+
+    void OnErrorPassword(PlayFabError error)
+    {
+        messaggio.text = "Errore nell'invio della email. Per favore riprova!";
     }
 
 
