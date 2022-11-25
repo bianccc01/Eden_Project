@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 579650878193945755}
   m_Layer: 0
   m_Name: explorer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -277,12 +277,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd80c7c8fa776c4e8c22d1c955faa95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifebar: {fileID: 0}
+  lifebar: {fileID: 2655743345156143205, guid: 7e6d4bcdeccb71343a9ba98428d7ca3c, type: 3}
   maxHealth: 250
   currentHealth: 200
   MaxOx: 100
   CurrentOx: 100
-  OxBar: {fileID: 0}
+  OxBar: {fileID: 6154485591080987128, guid: 24fcac0a91fe81247914f7fcaecfb024, type: 3}
 --- !u!114 &579650878193945755
 MonoBehaviour:
   m_ObjectHideFlags: 0

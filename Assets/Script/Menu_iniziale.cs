@@ -18,6 +18,8 @@ public class Menu_iniziale : MonoBehaviour
 
        PlayerPrefs.SetFloat("PosizioneY",15f);
        PlayerPrefs.SetFloat("PosizioneX",-20f);
+
+       PlayerPrefs.SetInt("StatoNemico",1);
        
        SceneManager.LoadScene(5);
     }
