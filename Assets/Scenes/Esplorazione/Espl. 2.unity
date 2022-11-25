@@ -2686,6 +2686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_explorer
       objectReference: {fileID: 0}
+    - target: {fileID: 8096920735691077053, guid: f79ea1442fdaebd46b2a38150e4e1e91, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 728891713}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f79ea1442fdaebd46b2a38150e4e1e91, type: 3}
 --- !u!1 &505170125
@@ -2754,6 +2758,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4261558949071564622, guid: e625ec561ffc87f41bf15e2e2ae571b4, type: 3}
   m_PrefabInstance: {fileID: 1094982818}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &728891713 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 854257286225806295, guid: e625ec561ffc87f41bf15e2e2ae571b4, type: 3}
+  m_PrefabInstance: {fileID: 1094982818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1069313670 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2501198810815215103, guid: 6eea94a6e8e1ade41b9f14e44c456ac2, type: 3}
+  m_PrefabInstance: {fileID: 1675336775}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c2e19d3a8bd0054194051fabde64333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1094982818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2761,14 +2781,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 579650878193945754, guid: e625ec561ffc87f41bf15e2e2ae571b4, type: 3}
+      propertyPath: OxBar
+      value: 
+      objectReference: {fileID: 2136820062}
+    - target: {fileID: 579650878193945754, guid: e625ec561ffc87f41bf15e2e2ae571b4, type: 3}
+      propertyPath: lifebar
+      value: 
+      objectReference: {fileID: 1069313670}
+    - target: {fileID: 579650878193945754, guid: e625ec561ffc87f41bf15e2e2ae571b4, type: 3}
+      propertyPath: CurrentOx
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 579650878193945755, guid: e625ec561ffc87f41bf15e2e2ae571b4, type: 3}
       propertyPath: Osbar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2136820062}
     - target: {fileID: 579650878193945755, guid: e625ec561ffc87f41bf15e2e2ae571b4, type: 3}
       propertyPath: lifebar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1069313670}
     - target: {fileID: 854257286225806295, guid: e625ec561ffc87f41bf15e2e2ae571b4, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -11104,3 +11136,14 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2136820062 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2501198811935880354, guid: 6eea94a6e8e1ade41b9f14e44c456ac2, type: 3}
+  m_PrefabInstance: {fileID: 1675336775}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8470e1add052e81469f0f49c5b3984fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

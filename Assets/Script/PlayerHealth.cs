@@ -63,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
         {
             if (maxHealth > 0)
             {
-                maxHealth -= 0.01f;
+                maxHealth -= 1f;
             }
             
             lifebar.SetMaxHealth(maxHealth);
