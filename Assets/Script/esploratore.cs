@@ -44,6 +44,8 @@ public class esploratore : MonoBehaviour
     {
         if (theCollision.gameObject.tag == "Enemy")
         {
+            PlayerPrefs.SetFloat("PosizioneY", rb.position.y);
+            PlayerPrefs.SetFloat("PosizioneX", rb.position.x);
             SceneManager.LoadScene(6);
         }
     }
