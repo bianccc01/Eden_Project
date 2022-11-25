@@ -15,15 +15,17 @@ public class InizializzazioniMappa : MonoBehaviour
     {
         y=PlayerPrefs.GetFloat("PosizioneY");
         x=PlayerPrefs.GetFloat("PosizioneX");
-        exp = Resourse.Load()
-        Instantiate(exp,new Vector2 (x,y),transform.rotation);
 
-        if(PlayerPrefs.GetInt("StatoNemico") == 1)
-        Instantiate(enemy,new Vector2(-8,9),transform.rotation);
+        exp.transform.position = new Vector2(x,y);
+       
+        
+
+        if(PlayerPrefs.GetInt("StatoNemico") == 0)
+         enemy.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     private void OnDisable() {
-        Destroy(enemy);
+        
     }
 }
