@@ -15,6 +15,10 @@ public class Menu_iniziale : MonoBehaviour
        PlayerPrefs.SetFloat("Ossigeno",100f);
        PlayerPrefs.SetFloat("MaxHealth", 250f);
        PlayerPrefs.SetFloat("CurrentHealth",250f);
+
+       PlayerPrefs.SetFloat("PosizioneY",15f);
+       PlayerPrefs.SetFloat("PosizioneX",-20f);
+       
        SceneManager.LoadScene(5);
     }
 
