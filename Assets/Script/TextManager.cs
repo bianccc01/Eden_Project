@@ -15,7 +15,6 @@ public class TextManager : MonoBehaviour
     public static int CurrentAmmo;
     public static int TotalAmmo;
 
-    public static float timer;
     // Use this for initialization
 
 
@@ -32,14 +31,8 @@ public class TextManager : MonoBehaviour
          // Per impostare il testo posso anche usare la proprietà text come per il testo di default
          CurrentAmmo = player.GetCurrentAmmo();
          TotalAmmo = player.GetTotalAmmo();
-         timer = player.GetTime();
 
-         if(timer<3f)
-         {
-          Testo_punteggio.text = CurrentAmmo.ToString()+ "/"+ TotalAmmo.ToString() + "\n" + timer.ToString();
-         }
-
-         else Testo_punteggio.text = CurrentAmmo.ToString()+ "/"+ TotalAmmo.ToString();
+         Testo_punteggio.text = CurrentAmmo.ToString()+ "/"+ TotalAmmo.ToString();
      
          
 
