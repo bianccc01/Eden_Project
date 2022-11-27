@@ -54,4 +54,10 @@ public class esploratore : MonoBehaviour
     {
         moveInput = value.Get<Vector2>();
     }
+
+
+    void OnInteract ()
+    {
+        
+    }
 }

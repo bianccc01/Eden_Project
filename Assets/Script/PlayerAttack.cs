@@ -7,6 +7,9 @@ public class PlayerAttack : MonoBehaviour
 
     public Transform spawnPos;
     public GameObject bullet;
+    public GameObject pistola;
+    public GameObject mitra;
+
 
     private float time = 1.5f;
 
@@ -19,6 +22,14 @@ public class PlayerAttack : MonoBehaviour
     public int TotalAmmo = 20;
 
     public bool shoot = false;
+
+    public int arma; //Tiene conto dell'arma che si sta utilizzando (0 = niente, 1 = pistola, 2 = mitra)
+
+    private void Start() 
+    {
+        //appena inizia non si avrà nessuna arma
+        arma = 0;
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -77,6 +88,30 @@ public class PlayerAttack : MonoBehaviour
     }
 
 
+    /*Tasto R della tastiera*/
+    public void OnSwitch()
+    {
+        if(arma == 0)
+        {
+            pistola.gameObject.SetActive(true);
+            arma++;
+        }
+
+        else if(arma == 1)
+        {
+            pistola.gameObject.SetActive(false);
+            mitra.gameObject.SetActive(true);
+            arma++;
+        }
+
+        else if(arma == 2)
+        {
+            mitra.gameObject.SetActive(false);
+            arma=0;
+        }
+    }
+
+
     public int GetCurrentAmmo()
     {
         return 6-this.bullets;
@@ -85,10 +120,5 @@ public class PlayerAttack : MonoBehaviour
     public int GetTotalAmmo()
     {
         return this.TotalAmmo;
-    }
-
-    public float GetTime()
-    {
-        return 3f-this.timer;
     }
 }

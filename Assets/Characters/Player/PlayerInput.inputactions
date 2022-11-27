@@ -42,9 +42,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Regenerate",
+                    "name": "Switch",
                     "type": "Button",
-                    "id": "30d050a8-8b1d-4f9e-a767-2c3d77bb1a3e",
+                    "id": "a27430b5-e3df-4ddc-81c4-ca4dd759ec6b",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -208,12 +208,12 @@
                 },
                 {
                     "name": "",
-                    "id": "5f6aa173-72f3-40d2-9fa8-737e0b18e6a0",
+                    "id": "2b2f6dcb-be04-4374-a2dd-8e457d65237d",
                     "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Regenerate",
+                    "action": "Switch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
