@@ -21,8 +21,6 @@ public class PlayerAttack : MonoBehaviour
 
     private int MitraBullets;
 
-    private float timer;
-
     public int TotalAmmo = 20;
 
     public int TotalAmmoMitra = 100;
@@ -49,8 +47,6 @@ public class PlayerAttack : MonoBehaviour
             shoot = false;
         }
 
-        timer = 0f;
-
         if (shoot && bullets < 6 && arma == 1)
         {
             Instantiate(bullet, spawnPos.position, spawnPos.rotation);
@@ -59,7 +55,7 @@ public class PlayerAttack : MonoBehaviour
         }
 
 
-        if (Input.GetButton("Fire1") && MitraBullets <= 15 && arma == 2 && time>=0.2f)
+        if (Input.GetButton("Fire1") && MitraBullets < 15 && arma == 2 && time>=0.2f)
         {
             Instantiate(bullet, spawnPos.position, spawnPos.rotation);
             MitraBullets++;
@@ -72,16 +68,11 @@ public class PlayerAttack : MonoBehaviour
             ReloadMitra();
         }
 
-        
-
-
-
-        
     }
 
 
     /*Left click*/
-    void OnShoot(InputValue value)
+    void OnShoot()
     {
 
         if(time>=0.3f && arma == 1)
@@ -160,11 +151,34 @@ public class PlayerAttack : MonoBehaviour
 
     public int GetCurrentAmmo()
     {
-        return 6-this.bullets;
+
+        if(arma==1)
+        {
+            return 6-this.bullets;
+        }
+
+        else if (arma == 2)
+        {
+            return 15-this.MitraBullets;
+        }
+
+        else return 0;
+       
     }
 
     public int GetTotalAmmo()
     {
-        return this.TotalAmmo;
+
+        if(arma==1)
+        {
+            return this.TotalAmmo;
+        }
+        
+        else if (arma==2)
+        {
+            return this.TotalAmmoMitra;
+        }
+
+        else return -1;
     }
 }
