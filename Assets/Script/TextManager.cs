@@ -32,7 +32,14 @@ public class TextManager : MonoBehaviour
          CurrentAmmo = player.GetCurrentAmmo();
          TotalAmmo = player.GetTotalAmmo();
 
-         Testo_punteggio.text = CurrentAmmo.ToString()+ "/"+ TotalAmmo.ToString();
+         if(TotalAmmo==-1)
+         {
+          Testo_punteggio.text = (" ");
+         }
+
+         else Testo_punteggio.text = CurrentAmmo.ToString()+ "/"+ TotalAmmo.ToString();
+
+         
      
          
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -11,15 +12,18 @@ public class PlayerAttack : MonoBehaviour
     public GameObject mitra;
 
 
+
     private float time = 1.5f;
 
     private float timeReload;
 
     private int bullets;
 
-    private float timer;
+    private int MitraBullets;
 
     public int TotalAmmo = 20;
+
+    public int TotalAmmoMitra = 100;
 
     public bool shoot = false;
 
@@ -37,29 +41,41 @@ public class PlayerAttack : MonoBehaviour
 
         time += Time.fixedDeltaTime;
 
-        if (bullets == 6 && TotalAmmo > 0)
+        if (bullets == 6 && TotalAmmo > 0 && arma==1)
         {
             Reload();
-            timer+=Time.fixedDeltaTime;
             shoot = false;
         }
 
-        timer = 0f;
-
-        if (shoot && bullets < 6)
+        if (shoot && bullets < 6 && arma == 1)
         {
             Instantiate(bullet, spawnPos.position, spawnPos.rotation);
             bullets++;
             shoot = false;
         }
-        
+
+
+        if (Input.GetButton("Fire1") && MitraBullets < 15 && arma == 2 && time>=0.2f)
+        {
+            Instantiate(bullet, spawnPos.position, spawnPos.rotation);
+            MitraBullets++;
+            time = 0f;
+        }
+
+        if (MitraBullets == 15 && TotalAmmoMitra > 0 && arma==2)
+        {
+            print("Provo a ricaricare ");
+            ReloadMitra();
+        }
+
     }
 
 
     /*Left click*/
     void OnShoot()
     {
-        if(time>=0.5f)
+
+        if(time>=0.3f && arma == 1)
         {
             shoot = true;
             time = 0f;
@@ -84,6 +100,27 @@ public class PlayerAttack : MonoBehaviour
             timeReload = 0;
             print("Reload finito !");
             TotalAmmo = 0;
+        }
+    }
+
+    
+    void ReloadMitra()
+    {
+        timeReload += Time.fixedDeltaTime;
+        if(timeReload >= 4f && TotalAmmoMitra>=15)
+        {
+            MitraBullets = 0;
+            timeReload = 0f;
+            print("Reload finito !");
+            TotalAmmoMitra -=15;
+        }
+
+       else if(timeReload >= 4f && TotalAmmoMitra > 0)
+        {
+            MitraBullets = (6-TotalAmmoMitra);
+            timeReload = 0;
+            print("Reload finito !");
+            TotalAmmoMitra = 0;
         }
     }
 
@@ -114,11 +151,34 @@ public class PlayerAttack : MonoBehaviour
 
     public int GetCurrentAmmo()
     {
-        return 6-this.bullets;
+
+        if(arma==1)
+        {
+            return 6-this.bullets;
+        }
+
+        else if (arma == 2)
+        {
+            return 15-this.MitraBullets;
+        }
+
+        else return 0;
+       
     }
 
     public int GetTotalAmmo()
     {
-        return this.TotalAmmo;
+
+        if(arma==1)
+        {
+            return this.TotalAmmo;
+        }
+        
+        else if (arma==2)
+        {
+            return this.TotalAmmoMitra;
+        }
+
+        else return -1;
     }
 }
