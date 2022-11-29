@@ -186,17 +186,6 @@
                 },
                 {
                     "name": "",
-                    "id": "3703c3ac-a14e-4c6b-82ef-7cd1eb9319d9",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shoot",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "e1f30b4e-9b08-4bc7-bf2c-8f1393115a66",
                     "path": "<Keyboard>/l",
                     "interactions": "",

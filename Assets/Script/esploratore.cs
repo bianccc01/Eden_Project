@@ -55,6 +55,31 @@ public class esploratore : MonoBehaviour
         moveInput = value.Get<Vector2>();
     }
 
+    public void down()
+    {
+        moveInput = new Vector2(0,-1);
+    }
+
+    public void left()
+    {
+        moveInput = new Vector2(-1,0);
+    }
+
+    public void right()
+    {
+        moveInput = new Vector2(1,0);
+    }
+
+    public void up()
+    {
+        moveInput = new Vector2(0,1);
+    }
+
+    public void stop()
+    {
+        moveInput = new Vector2(0,0);
+    }
+
 
     void OnInteract ()
     {

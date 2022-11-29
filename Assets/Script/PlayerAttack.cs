@@ -181,4 +181,23 @@ public class PlayerAttack : MonoBehaviour
 
         else return -1;
     }
+
+
+    public void ShootTouch()
+    {
+        if (bullets < 6 && arma == 1 && time>=0.5f)
+        {
+            Instantiate(bullet, spawnPos.position, spawnPos.rotation);
+            bullets++;
+            time = 0f;
+        }
+
+
+        if (MitraBullets < 15 && arma == 2 && time>=0.2f)
+        {
+            Instantiate(bullet, spawnPos.position, spawnPos.rotation);
+            MitraBullets++;
+            time = 0f;
+        }
+    }
 }

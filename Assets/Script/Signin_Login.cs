@@ -8,7 +8,7 @@ using PlayFab.ClientModels;
 using UnityEngine.SceneManagement;
 using System;
 using TMPro;
-using UnityEditor.PackageManager;
+//using UnityEditor.PackageManager;
 using Unity.VisualScripting;
 
 public class Signin_Login : MonoBehaviour
@@ -52,7 +52,7 @@ public class Signin_Login : MonoBehaviour
 
     void OnErrorRegister(PlayFabError error)
     {
-        messaggio.text = "Account non creato! Username o email già in uso.";
+        messaggio.text = "Account non creato! Username o email giï¿½ in uso.";
         Debug.Log($"Account non creato!\n {error.GenerateErrorReport()}");
     }
 

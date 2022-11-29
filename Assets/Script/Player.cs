@@ -155,6 +155,42 @@ public class Player : MonoBehaviour
 
     }
 
+    public void down()
+    {
+        moveInput = new Vector2(0,-1);
+    }
+
+    public void left()
+    {
+        moveInput = new Vector2(-1,0);
+    }
+
+    public void right()
+    {
+        moveInput = new Vector2(1,0);
+    }
+
+    public void up()
+    {
+        moveInput = new Vector2(0,1);
+    }
+
+    public void stop()
+    {
+        moveInput = new Vector2(0,0);
+    }
+
+    public void PlayerJumpTouch()
+    {
+        if (isGrounded == true)
+        {
+            rb.AddForce(Vector2.up * jumpamount, ForceMode2D.Impulse);
+
+            RefreshGravity();
+        }
+    }
+
+
     
 
     
