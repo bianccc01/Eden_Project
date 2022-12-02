@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu/Login.unity
+    guid: 81240d94b6a94894296faf035a39e6d4
+  - enabled: 1
+    path: Assets/Scenes/Registrazione.unity
+    guid: 27e270ead85fae04998fb8eee731d10e
+  - enabled: 1
+    path: Assets/Scenes/Menu/Menu_iniziale.unity
+    guid: 15687ac378a75da47a086974b7dda355
+  - enabled: 1
+    path: Assets/Scenes/Menu/Menu_opzioni.unity
+    guid: 43a663dc70d9d3649865bcc9c743cf96
+  - enabled: 1
+    path: Assets/Scenes/Inventario/MenuPersonaggio.unity
+    guid: 1cb38eb5b9d7c0a48818b15815075045
+  - enabled: 1
+    path: Assets/Scenes/Esplorazione/Espl. 2.unity
+    guid: f2c1a02bb2cf7364eb538f394a99ef4a
+  - enabled: 1
+    path: Assets/Scenes/Fight/Fight V.2.unity
+    guid: fc7671df301285d4e9a1024cace5408c
   m_configObjects: {}
