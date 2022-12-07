@@ -11,6 +11,14 @@ public class esploratore : MonoBehaviour
     public float moveSpeed = 0.1f;
     private Vector2 moveInput;
 
+    public Inventario inventario;
+
+
+    private void Awake()
+    {
+        inventario = new Inventario(9);
+    }
+
     
     // Start is called before the first frame update
     void Start()
