@@ -19,5 +19,5 @@ public class Collectable : MonoBehaviour
 }
  public enum CollectableType
  {
-      NONE, CHIAVE
+      NONE, CHIAVE, COIN
  }
