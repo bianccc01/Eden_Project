@@ -26,4 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fight/Fight V.2.unity
     guid: fc7671df301285d4e9a1024cace5408c
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
+      guid: f120f1cfcf7eaa2418ca61aaa5a46e4f, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
+      guid: 10e4f90cae169ad48b22fba28a3172a1, type: 2}

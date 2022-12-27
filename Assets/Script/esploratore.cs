@@ -10,8 +10,13 @@ public class esploratore : MonoBehaviour
     private Rigidbody2D rb;
     public float moveSpeed = 0.1f;
     private Vector2 moveInput;
-    public DialogueScript Dialogo;
+    //public DialogueScript Dialogo;
     public Inventario inventario;
+
+    public bool canTalk;
+
+    public bool interact;
+
 
 
     private void Awake()
@@ -24,6 +29,7 @@ public class esploratore : MonoBehaviour
     void Start()
     {
         rb= GetComponent<Rigidbody2D>();
+        canTalk = false;
     }
 
     // Update is called once per frame
@@ -56,10 +62,19 @@ public class esploratore : MonoBehaviour
             PlayerPrefs.SetFloat("PosizioneX",rb.position.x);
             SceneManager.LoadScene(6);
         }
-       // if (theCollision.gameObject.tag == "Png1")
-       // {
-       //   
-       //  }
+       if (theCollision.gameObject.tag == "Png1")
+       {
+         canTalk = true;
+       }
+    }
+
+    private void OnCollisionExit2D(Collision2D other) {
+        
+        if (other.gameObject.tag == "Png1")
+       {
+         interact = false;
+         canTalk = false;
+       }
     }
 
     void OnMove(InputValue value)
@@ -93,8 +108,16 @@ public class esploratore : MonoBehaviour
     }
 
 
-    void OnInteract ()
+    public void OnInteract ()
     {
+        if(canTalk){
+        interact = true;
+        }
         
+    }
+
+    public bool getInteract()
+    {
+        return this.interact;
     }
 }
