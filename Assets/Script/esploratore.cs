@@ -10,7 +10,7 @@ public class esploratore : MonoBehaviour
     private Rigidbody2D rb;
     public float moveSpeed = 0.1f;
     private Vector2 moveInput;
-
+    public DialogueScript Dialogo;
     public Inventario inventario;
 
 
@@ -56,6 +56,10 @@ public class esploratore : MonoBehaviour
             PlayerPrefs.SetFloat("PosizioneX",rb.position.x);
             SceneManager.LoadScene(6);
         }
+       // if (theCollision.gameObject.tag == "Png1")
+       // {
+       //   
+       //  }
     }
 
     void OnMove(InputValue value)
