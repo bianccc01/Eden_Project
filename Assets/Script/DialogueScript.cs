@@ -5,10 +5,13 @@ using TMPro;
 
 public class DialogueScript : MonoBehaviour
 {
-
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+
+
+    public esploratore esplorator;
+    
     public bool attivo;
 
     public int index;
@@ -17,16 +20,14 @@ public class DialogueScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        attivo = false;
-        textComponent.text = string.Empty;
-        if(attivo) StartDialogue();
+       textComponent.text = string.Empty;
+        StartDialogue();
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-        if (Input.GetMouseButtonDown(0))
+       if (Input.GetMouseButtonDown(0))
         {
             if (textComponent.text == lines[index])
             {
@@ -64,6 +65,7 @@ public class DialogueScript : MonoBehaviour
         }
         else
         {
+            this.index = 0;
             gameObject.SetActive(false);   
         }
     }
@@ -71,5 +73,16 @@ public class DialogueScript : MonoBehaviour
     public DialogueScript GetDialogue()
     {
         return this;
+    }
+
+    public void setIndex (int i)
+    {
+        this.index = i+1;
+        textComponent.text = lines[0];
+    }
+
+    public void activate ()
+    {
+        gameObject.SetActive(true);
     }
 }
