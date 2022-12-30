@@ -20,11 +20,13 @@ public class Player : MonoBehaviour
     public float gravityScale = 10; //Gravità per il salto verso l'alto
     public float fallingGravityScale = 40; //Gravità per la discesa verso il basso
 
+    public int platform;
+
 
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>(); //inizializzo le componenti necessarie per rendere il player un corpo rigido
+        rb = GetComponent<Rigidbody2D>();  //inizializzo le componenti necessarie per rendere il player un corpo rigido
     }
 
     void FixedUpdate()
@@ -34,11 +36,7 @@ public class Player : MonoBehaviour
         {
             PlayerMove();
         }
-
-
             PlayerJump();
-            
-            
         }
 
     /*Funzione che viene richiamata appena entra in collisione con un oggetto*/
@@ -65,6 +63,40 @@ public class Player : MonoBehaviour
             RefreshGravity();
             isGrounded = false;
         }
+
+        if (theCollision.gameObject.tag == "Piattaforma 0")
+        {
+            platform = 0;
+        }
+
+        if (theCollision.gameObject.tag == "Piattaforma 1")
+        {
+            platform = 1;
+        }
+
+        if (theCollision.gameObject.tag == "Piattaforma 2")
+        {
+            platform = 2;
+        }
+
+        if (theCollision.gameObject.tag == "Piattaforma 3")
+        {
+            platform = 3;
+        }
+
+        if (theCollision.gameObject.tag == "Piattaforma 4")
+        {
+           platform = 4;
+        }
+
+        if (theCollision.gameObject.tag == "Piattaforma 5")
+        {
+            platform = 5;
+        }
+
+        
+        
+        
 
     }
 
@@ -155,6 +187,12 @@ public class Player : MonoBehaviour
 
     }
 
+    public int getPlatform ()
+    {
+        return this.platform;
+    }
+
+    
     public void down()
     {
         moveInput = new Vector2(0,-1);

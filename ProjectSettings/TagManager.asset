@@ -9,6 +9,12 @@ TagManager:
   - Bullet
   - Enemy
   - Lupo
+  - Piattaforma 1
+  - Piattaforma 2
+  - Piattaforma 3
+  - Piattaforma 4
+  - Piattaforma 5
+  - Piattaforma 0
   layers:
   - Default
   - TransparentFX
