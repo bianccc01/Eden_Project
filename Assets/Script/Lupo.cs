@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Lupo : MonoBehaviour
 {
-    public Transform player;
     public Player player2;
     public float moltiplicatoreDifficolta = 1f; //Temporaneo
     public float velocitaNemico;
@@ -22,6 +21,7 @@ public class Lupo : MonoBehaviour
 
     public int platform;
     public int platformPlayer;
+    public float puntoX;
 
     public HealthBar healthBar;
 
@@ -47,64 +47,40 @@ public class Lupo : MonoBehaviour
         percorso(platformPlayer);
 
         
-        characterScale = transform.localScale;
-
-        /*if(player.position.y >  rb.position.y + 0.40f)
-        {
-            if(rb.position.x < -17)
-            {
-                characterScale.x = characterScale.x * (-1);
-                transform.position = Vector2.MoveTowards(rb.position,new Vector2(rb.position.x +3,rb.position.y),
-            moltiplicatoreDifficolta * velocitaNemico * Time.fixedDeltaTime);
-            }
-            
-            else if (rb.position.x > 9)
-            {
-                characterScale.x = characterScale.x * (-1);
-                transform.position = Vector2.MoveTowards(rb.position,new Vector2(rb.position.x -3,rb.position.y),
-            moltiplicatoreDifficolta * velocitaNemico * Time.fixedDeltaTime);
-            }
-            
-            else if(grounded && rb.velocity.y == 0 && time > 1f)
-            {
-                rb.AddForce(new Vector2(characterScale.x*(-1),2) * 40,ForceMode2D.Impulse);
-                
-                time = 0f;
-            }
-        }
-
-        else 
-        {
-            transform.position = Vector2.MoveTowards(rb.position,new Vector2(player.transform.position.x,rb.position.y),
-            moltiplicatoreDifficolta * velocitaNemico * Time.fixedDeltaTime);
-
-            if(player.transform.position.x < transform.position.x){
-            characterScale.x = 0.9f;
-        }
-
-            if(player.transform.position.x > transform.position.x){
-            characterScale.x = -0.9f;
-        }
-
-        
-        }
-
-        transform.localScale = characterScale;
-*/
+      
         
         
         
-       
-
-
         if(currentHealth == 0)
         {
             Destroy(gameObject);
             PlayerPrefs.SetInt("StatoNemico",0);
             SceneManager.LoadScene(5);
-        
         }
+
+        updateScale();
+
+        
+
+        transform.localScale = characterScale;
+    
     }
+
+
+
+    private void updateScale ()
+    {
+        characterScale = transform.localScale;
+
+        if (puntoX >= rb.position.x)
+        {
+            characterScale.x = -0.9f;
+        }
+
+        else characterScale.x = 0.9f;
+        transform.localScale = characterScale;
+    }
+    
 
 
 
@@ -114,26 +90,64 @@ public class Lupo : MonoBehaviour
         {
             if(platform == 0)
             {
-                transform.position = Vector2.MoveTowards(rb.position,new Vector2(-3f,rb.position.y),
+                puntoX = -3f;
+                transform.position = Vector2.MoveTowards(rb.position,new Vector2(puntoX,rb.position.y),
                 moltiplicatoreDifficolta * velocitaNemico * Time.fixedDeltaTime);
-            if(rb.position == new Vector2(-3f,rb.position.y))
-            rb.velocity = new Vector2(10,30);
+            if(rb.position == new Vector2(puntoX,rb.position.y)) {
+            characterScale.x = -0.9f;
+            transform.localScale = characterScale;
+            rb.velocity = new Vector2(10,25);
              RefreshGravity();
+            }
 
             }
 
             else if (platform == 3)
             {
-                transform.position = Vector2.MoveTowards(rb.position,new Vector2(1.54f,rb.position.y),velocitaNemico * Time.fixedDeltaTime);
+                puntoX = 1.54f;
+                transform.position = Vector2.MoveTowards(rb.position,new Vector2(puntoX,rb.position.y),velocitaNemico * Time.fixedDeltaTime);
             
-            if(rb.position == new Vector2(1.54f,rb.position.y))
-            rb.velocity = new Vector2(10,30);
+            if(rb.position == new Vector2(puntoX,rb.position.y))
+            rb.velocity = new Vector2(12,23);
              RefreshGravity();
             }
+
+            else if (platform == 2)
+            {
+                puntoX = 3.60f;
+                transform.position = Vector2.MoveTowards(rb.position,new Vector2(puntoX,rb.position.y),velocitaNemico * Time.fixedDeltaTime);
+            
+            if(rb.position == new Vector2(puntoX,rb.position.y))
+            rb.velocity = new Vector2(-20,30);
+             RefreshGravity();
+            }
+
+            else if (platform == 4)
+            {
+                puntoX = -18f;
+                transform.position = Vector2.MoveTowards(rb.position,new Vector2(-18f,rb.position.y),velocitaNemico * Time.fixedDeltaTime);
+                puntoX = -14f;
+                transform.position = Vector2.MoveTowards(rb.position,new Vector2(-14f,rb.position.y),velocitaNemico * Time.fixedDeltaTime);
+                platform = 0;
+            }
+                
+            else 
+            {
+                puntoX = -18f;
+                transform.position = Vector2.MoveTowards(rb.position,new Vector2(-18f,rb.position.y),velocitaNemico * Time.fixedDeltaTime);
+            }
+        }
+
+        else 
+        {
+            puntoX = player2.getPosition().x;
+            transform.position = Vector2.MoveTowards(rb.position,player2.getPosition(),velocitaNemico * Time.fixedDeltaTime);
         }
     }
 
 
+    
+    
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Bullet"){
             TakeDamage(100);

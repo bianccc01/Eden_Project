@@ -187,6 +187,11 @@ public class Player : MonoBehaviour
 
     }
 
+
+    public Vector2 getPosition(){
+        return rb.position;
+    }
+
     public int getPlatform ()
     {
         return this.platform;
