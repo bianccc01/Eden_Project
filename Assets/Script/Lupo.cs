@@ -47,6 +47,8 @@ public class Lupo : MonoBehaviour
         percorso(platformPlayer);
 
         
+
+        
       
         
         
@@ -72,7 +74,17 @@ public class Lupo : MonoBehaviour
     {
         characterScale = transform.localScale;
 
-        if (puntoX >= rb.position.x)
+        if (rb.velocity.x > 0)
+        {
+            characterScale.x = -0.9f;
+        }
+
+        else if (rb.velocity.x < 0)
+        {
+            characterScale.x = 0.9f;
+        }
+
+        else if (puntoX >= rb.position.x)
         {
             characterScale.x = -0.9f;
         }
@@ -94,8 +106,6 @@ public class Lupo : MonoBehaviour
                 transform.position = Vector2.MoveTowards(rb.position,new Vector2(puntoX,rb.position.y),
                 moltiplicatoreDifficolta * velocitaNemico * Time.fixedDeltaTime);
             if(rb.position == new Vector2(puntoX,rb.position.y)) {
-            characterScale.x = -0.9f;
-            transform.localScale = characterScale;
             rb.velocity = new Vector2(10,25);
              RefreshGravity();
             }
