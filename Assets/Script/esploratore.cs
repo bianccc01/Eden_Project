@@ -67,6 +67,11 @@ public class esploratore : MonoBehaviour
        {
          canTalk = true;
        }
+
+        if (theCollision.gameObject.tag == "Png2")
+        {
+            canTalk = true;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D other) {
@@ -76,6 +81,12 @@ public class esploratore : MonoBehaviour
          interact = false;
          canTalk = false;
        }
+
+        if (other.gameObject.tag == "Png2")
+        {
+            interact = false;
+            canTalk = false;
+        }
     }
 
     void OnMove(InputValue value)
