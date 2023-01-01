@@ -35,6 +35,7 @@ public class esploratore : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
        transform.Translate(moveInput*moveSpeed*Time.fixedDeltaTime);
 
         Vector3 characterScale = transform.localScale;

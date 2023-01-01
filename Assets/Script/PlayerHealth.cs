@@ -16,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar OxBar;
 
+
    
 
 
@@ -23,7 +24,8 @@ public class PlayerHealth : MonoBehaviour
     { 
         CurrentOx = PlayerPrefs.GetFloat("Ossigeno");
         maxHealth = PlayerPrefs.GetFloat("MaxHealth");
-        currentHealth = PlayerPrefs.GetFloat("CurrentHealth"); 
+        currentHealth = PlayerPrefs.GetFloat("CurrentHealth");
+
     } 
 
 

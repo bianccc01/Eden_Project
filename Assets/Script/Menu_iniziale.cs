@@ -12,12 +12,12 @@ public class Menu_iniziale : MonoBehaviour
 
     public void Button_Play()
     {
-       PlayerPrefs.SetFloat("Ossigeno",100f);
-       PlayerPrefs.SetFloat("MaxHealth", 250f);
-       PlayerPrefs.SetFloat("CurrentHealth",250f);
+        PlayerPrefs.SetFloat("Ossigeno", 100f);
+        PlayerPrefs.SetFloat("MaxHealth", 250f);
+        PlayerPrefs.SetFloat("CurrentHealth", 250f);
 
-       PlayerPrefs.SetFloat("PosizioneY",15f);
-       PlayerPrefs.SetFloat("PosizioneX",-20f);
+        PlayerPrefs.SetFloat("PosizioneY", 15f);
+        PlayerPrefs.SetFloat("PosizioneX", -20f);
 
        PlayerPrefs.SetInt("StatoNemico",1);
        

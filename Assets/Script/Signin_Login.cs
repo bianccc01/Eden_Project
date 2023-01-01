@@ -10,6 +10,7 @@ using System;
 using TMPro;
 //using UnityEditor.PackageManager;
 using Unity.VisualScripting;
+using System.Collections.Generic;
 
 public class Signin_Login : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class Signin_Login : MonoBehaviour
     public TMP_InputField emailR;
     public TMP_InputField passwordR;
     public TMP_InputField usernameR;
+    public Lifebar lifebar;
+    public HealthBar healthBar;
 
     public void Button_Registrazione()
     {
@@ -52,7 +55,7 @@ public class Signin_Login : MonoBehaviour
 
     void OnErrorRegister(PlayFabError error)
     {
-        messaggio.text = "Account non creato! Username o email gi� in uso.";
+        messaggio.text = "Account non creato! Username o email gia' in uso.";
         Debug.Log($"Account non creato!\n {error.GenerateErrorReport()}");
     }
 
@@ -80,8 +83,6 @@ public class Signin_Login : MonoBehaviour
         Debug.Log($"Email o password non corretti!\n {error.GenerateErrorReport()}");
     }
 
-
-
     public void Button_Reset()
     {
         var request = new SendAccountRecoveryEmailRequest
@@ -102,5 +103,41 @@ public class Signin_Login : MonoBehaviour
         messaggio.text = "Errore nell'invio della email. Per favore riprova!";
     }
 
+    public void SetUserData()
+    {
+        PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest()
+        {
+            Data = new Dictionary<string, string>() {
+            {"Ossigeno", healthBar.name},
+            {"Salute", lifebar.name}
+        }
+        },
+        result => Debug.Log("Successfully updated user data"),
+        error => {
+            Debug.Log("Got error setting user data Ancestor to Arthur");
+            Debug.Log(error.GenerateErrorReport());
+        });
+    }
+
+    public void GetUserData(string myPlayFabId)
+    {
+        PlayFabClientAPI.GetUserData(new GetUserDataRequest()
+        {
+            PlayFabId = myPlayFabId,
+            Keys = null
+        }, result => {
+            Debug.Log("Got user data:");
+            if (result.Data != null && result.Data.ContainsKey("Ossigeno") && result.Data.ContainsKey("Salute") {
+                healthBar.SetHealth(result.Data["Ossigeno"].Value);
+            }
+            else
+                Debug.Log("Errore");
+        }, (error) => {
+            Debug.Log("Got error retrieving user data:");
+            Debug.Log(error.GenerateErrorReport());
+        });
+    }
+
 
 }
+

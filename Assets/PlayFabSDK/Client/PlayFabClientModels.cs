@@ -6933,6 +6933,8 @@ namespace PlayFab.ClientModels
         /// for requests by one player for information about another player; those requests will only return Public keys.
         /// </summary>
         public UserDataPermission? Permission;
+
+        
     }
 
     [Serializable]
