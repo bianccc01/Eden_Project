@@ -127,8 +127,9 @@ public class Signin_Login : MonoBehaviour
             Keys = null
         }, result => {
             Debug.Log("Got user data:");
-            if (result.Data != null && result.Data.ContainsKey("Ossigeno") && result.Data.ContainsKey("Salute") {
-                healthBar.SetHealth(result.Data["Ossigeno"].Value);
+            if (result.Data != null && result.Data.ContainsKey("Ossigeno") && result.Data.ContainsKey("Salute")) 
+            {
+             //  healthBar.SetHealth(result.Data["Ossigeno"].Value);
             }
             else
                 Debug.Log("Errore");

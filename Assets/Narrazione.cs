@@ -3,56 +3,59 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ScriptStoria2 : MonoBehaviour
+public class Narrazione : MonoBehaviour
 {
+
     public TextMeshProUGUI textComponent;
-    public string[] lines;
+    public string[] frase;
     public float textSpeed;
-
-    public int index;
-
+    private int index;
 
     // Start is called before the first frame update
     void Start()
     {
-        textComponent.text = string.Empty;
+        textComponent.text= string.Empty;
         StartDialogue();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
+  
+        void Update()
         {
-            if (textComponent.text == lines[index])
+            if (Input.GetMouseButtonDown(0))
             {
-                NextLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
+                if (textComponent.text == frase[index])
+                {
+                    NextLine();
+                }
+                else
+                {
+                    StopAllCoroutines();
+                    textComponent.text = frase[index];
+                }
             }
         }
-    }
 
-    public void StartDialogue()
+
+    void StartDialogue()
     {
         index = 0;
         StartCoroutine(Typeline());
     }
+
     IEnumerator Typeline()
     {
-        foreach (char c in lines[index].ToCharArray())
+        foreach( char c in frase[index].ToCharArray())
         {
             textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            yield return new WaitForSeconds(textSpeed); 
         }
     }
 
+
     void NextLine()
     {
-        if (index < lines.Length - 1)
+        if (index < frase.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;
@@ -64,16 +67,10 @@ public class ScriptStoria2 : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
-    public ScriptStoria2 GetDialogue()
-    {
-        return this;
-    }
-
     public void setIndex(int i)
     {
         this.index = i + 1;
-        textComponent.text = lines[0];
+        textComponent.text = frase[0];
     }
 
     public void activate()
