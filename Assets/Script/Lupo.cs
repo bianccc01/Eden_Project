@@ -162,6 +162,10 @@ public class Lupo : MonoBehaviour
         if(other.gameObject.tag == "Bullet"){
             TakeDamage(100);
         }
+
+        if(other.gameObject.tag == "MitraBullet"){
+            TakeDamage(1);
+        }
     }
 
     void TakeDamage(int damage)

@@ -10,6 +10,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject bullet;
     public GameObject pistola;
     public GameObject mitra;
+    public GameObject mitraBullet;
 
 
 
@@ -57,7 +58,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (Input.GetButton("Fire1") && MitraBullets < 15 && arma == 2 && time>=0.2f)
         {
-            Instantiate(bullet, spawnPos.position, spawnPos.rotation);
+            Instantiate(mitraBullet, spawnPos.position, spawnPos.rotation);
             MitraBullets++;
             time = 0f;
         }
@@ -195,7 +196,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (MitraBullets < 15 && arma == 2 && time>=0.2f)
         {
-            Instantiate(bullet, spawnPos.position, spawnPos.rotation);
+            Instantiate(mitraBullet, spawnPos.position, spawnPos.rotation);
             MitraBullets++;
             time = 0f;
         }
