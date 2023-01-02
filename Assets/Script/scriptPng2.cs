@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scriptPng1 : MonoBehaviour
+public class scriptPng2 : MonoBehaviour
 {
 
     public esploratore esplorator;
 
-    public DialogueScript dialogo;
+    public DialogueScript2 dialogo;
 
     //public GameObject box;
 
@@ -20,7 +20,7 @@ public class scriptPng1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if((esplorator.getInteract()) && (esplorator.getTalk() == 1)){
+        if((esplorator.getInteract()) && (esplorator.getTalk() == 2)){
             //box.SetActive(true);
             dialogo.activate();
         }

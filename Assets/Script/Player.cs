@@ -31,13 +31,12 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        //(EQUIVALENTE)     rb.velocity = new Vector2(moveInput.x * moveSpeed ,rb.velocity.y);
         if (canMove)
         {
             PlayerMove();
         }
             PlayerJump();
-        }
+    }
 
     /*Funzione che viene richiamata appena entra in collisione con un oggetto*/
     private void OnCollisionEnter2D(Collision2D theCollision)
@@ -53,7 +52,7 @@ public class Player : MonoBehaviour
 
             if(rb.position.x - theCollision.gameObject.transform.position.x < 0 )
             {
-                rb.AddForce(new Vector2(-1, 3) * 30, ForceMode2D.Impulse);
+                rb.AddForce(new Vector2(-1,3) * 30, ForceMode2D.Impulse);
                 RefreshGravity();
                 isGrounded = false;
             }
@@ -63,6 +62,7 @@ public class Player : MonoBehaviour
             RefreshGravity();
             isGrounded = false;
         }
+
 
         if (theCollision.gameObject.tag == "Piattaforma 0")
         {
@@ -93,11 +93,6 @@ public class Player : MonoBehaviour
         {
             platform = 5;
         }
-
-        
-        
-        
-
     }
 
 

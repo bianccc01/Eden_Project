@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DialogueScript : MonoBehaviour
+public class DialogueScript2 : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
@@ -11,10 +11,10 @@ public class DialogueScript : MonoBehaviour
 
 
     public esploratore esplorator;
-    
-    public bool attivo;
 
     public GameObject box;
+    
+    public bool attivo;
 
     public int index;
 
@@ -22,7 +22,7 @@ public class DialogueScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       textComponent.text = string.Empty;
+        textComponent.text = string.Empty;
         StartDialogue();
     }
 
@@ -72,7 +72,7 @@ public class DialogueScript : MonoBehaviour
         }
     }
 
-    public DialogueScript GetDialogue()
+    public DialogueScript2 GetDialogue()
     {
         return this;
     }
@@ -89,7 +89,7 @@ public class DialogueScript : MonoBehaviour
         box.SetActive(true);
     }
 
-    public void disattiva ()
+    public void disattiva()
     {
         gameObject.SetActive(false);
     }

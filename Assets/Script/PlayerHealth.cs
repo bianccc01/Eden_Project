@@ -59,6 +59,15 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
+    private void OnCollisionEnter2D(Collision2D theCollision)
+    {
+        if (theCollision.gameObject.tag == "Enemy")
+        {
+            TakeDamage(5);
+        }
+    }
+
+
     void RefreshMaxHealth()
     {
         if (CurrentOx <= 0f )

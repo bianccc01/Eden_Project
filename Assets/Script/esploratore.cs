@@ -13,7 +13,9 @@ public class esploratore : MonoBehaviour
     //public DialogueScript Dialogo;
     public Inventario inventario;
 
-    public bool canTalk;
+    public GameObject box;
+
+    public int canTalk;
 
     public bool interact;
 
@@ -29,12 +31,17 @@ public class esploratore : MonoBehaviour
     void Start()
     {
         rb= GetComponent<Rigidbody2D>();
-        canTalk = false;
+        canTalk = 0;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        if(canTalk == 0)
+        {
+            box.SetActive(false);
+        }
 
        transform.Translate(moveInput*moveSpeed*Time.fixedDeltaTime);
 
@@ -65,12 +72,12 @@ public class esploratore : MonoBehaviour
         }
        if (theCollision.gameObject.tag == "Png1")
        {
-         canTalk = true;
+            canTalk = 1;
        }
 
         if (theCollision.gameObject.tag == "Png2")
         {
-            canTalk = true;
+            canTalk = 2;
         }
     }
 
@@ -79,13 +86,13 @@ public class esploratore : MonoBehaviour
         if (other.gameObject.tag == "Png1")
        {
          interact = false;
-         canTalk = false;
+         canTalk = 0;
        }
 
         if (other.gameObject.tag == "Png2")
         {
             interact = false;
-            canTalk = false;
+            canTalk = 0;
         }
     }
 
@@ -122,7 +129,7 @@ public class esploratore : MonoBehaviour
 
     public void OnInteract ()
     {
-        if(canTalk){
+        if(canTalk != 0){
         interact = true;
         }
         
@@ -131,5 +138,10 @@ public class esploratore : MonoBehaviour
     public bool getInteract()
     {
         return this.interact;
+    }
+
+    public int getTalk()
+    {
+        return this.canTalk;
     }
 }

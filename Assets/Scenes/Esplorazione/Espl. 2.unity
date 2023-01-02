@@ -3225,6 +3225,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PNG1 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7022470219543190002, guid: c87375b6aecb10e48b23f1b73d80e775,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7502594644626099558, guid: c87375b6aecb10e48b23f1b73d80e775,
         type: 3}
       propertyPath: m_RootOrder
@@ -3511,6 +3516,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PNG1 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022470219543190002, guid: c87375b6aecb10e48b23f1b73d80e775,
+        type: 3}
+      propertyPath: m_TagString
+      value: Png2
       objectReference: {fileID: 0}
     - target: {fileID: 7502594644626099558, guid: c87375b6aecb10e48b23f1b73d80e775,
         type: 3}
@@ -3917,6 +3927,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PNG1 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7022470219543190002, guid: c87375b6aecb10e48b23f1b73d80e775,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7502594644626099558, guid: c87375b6aecb10e48b23f1b73d80e775,
         type: 3}
       propertyPath: m_RootOrder
@@ -4008,8 +4023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esplorator: {fileID: 728891714}
-  dialogo: {fileID: 1342580459}
-  box: {fileID: 1198003621}
+  dialogo: {fileID: 0}
 --- !u!1001 &371888700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4514,8 +4528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esplorator: {fileID: 728891714}
-  dialogo: {fileID: 1342580459}
-  box: {fileID: 1198003621}
+  dialogo: {fileID: 1342580462}
 --- !u!1 &549879912
 GameObject:
   m_ObjectHideFlags: 0
@@ -4547,7 +4560,7 @@ RectTransform:
   m_Children:
   - {fileID: 1460933274}
   m_Father: {fileID: 1576988210}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4625,6 +4638,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PNG1 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022470219543190002, guid: c87375b6aecb10e48b23f1b73d80e775,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7502594644626099558, guid: c87375b6aecb10e48b23f1b73d80e775,
         type: 3}
@@ -5489,7 +5507,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 233333455}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &786736475
+--- !u!114 &786736480
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5498,12 +5516,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 786736474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 649e65a797eead148bc9ce392519970d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a8b3d2a4c1440b488663006ac6ff40b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   esplorator: {fileID: 728891714}
-  dialogo: {fileID: 822140577}
-  box: {fileID: 1707328057}
+  dialogo: {fileID: 822140580}
 --- !u!1 &822140575
 GameObject:
   m_ObjectHideFlags: 0
@@ -5515,14 +5532,14 @@ GameObject:
   - component: {fileID: 822140576}
   - component: {fileID: 822140579}
   - component: {fileID: 822140578}
-  - component: {fileID: 822140577}
+  - component: {fileID: 822140580}
   m_Layer: 5
-  m_Name: DialogoPng1 2
+  m_Name: DialogoPng2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &822140576
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5530,40 +5547,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822140575}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1707328058}
-  m_RootOrder: 0
+  m_Father: {fileID: 1198003626}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &822140577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822140575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f116f315761d954a9141f0e11622f59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 822140578}
-  lines:
-  - Avanti, lo sai come funziona.
-  - "Non puoi rientrare finch\xE8 la missione non \xE8 finita"
-  - Datti da fare.
-  textSpeed: 0.05
-  esplorator: {fileID: 728891714}
-  attivo: 0
-  index: 0
 --- !u!114 &822140578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5587,7 +5583,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 9ad269c99dcf42b7aedefd83dd5a7b9d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5661,6 +5657,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822140575}
   m_CullTransparentMesh: 1
+--- !u!114 &822140580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822140575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b531c57ffd3054b856b9a144e190b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 822140578}
+  lines:
+  - 2
+  - sono
+  - 22
+  textSpeed: 0.05
+  esplorator: {fileID: 728891714}
+  box: {fileID: 1198003621}
+  attivo: 0
+  index: 0
 --- !u!1001 &910876603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5820,8 +5838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esplorator: {fileID: 728891714}
-  dialogo: {fileID: 1342580459}
-  box: {fileID: 1198003621}
+  dialogo: {fileID: 0}
 --- !u!1 &997778111
 GameObject:
   m_ObjectHideFlags: 0
@@ -5996,6 +6013,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 579650878193945745, guid: e625ec561ffc87f41bf15e2e2ae571b4,
+        type: 3}
+      propertyPath: box
+      value: 
+      objectReference: {fileID: 1198003621}
     - target: {fileID: 579650878193945754, guid: e625ec561ffc87f41bf15e2e2ae571b4,
         type: 3}
       propertyPath: OxBar
@@ -6210,6 +6232,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1342580458}
+  - {fileID: 822140576}
   m_Father: {fileID: 1576988210}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6229,7 +6252,7 @@ GameObject:
   - component: {fileID: 1342580458}
   - component: {fileID: 1342580461}
   - component: {fileID: 1342580460}
-  - component: {fileID: 1342580459}
+  - component: {fileID: 1342580462}
   m_Layer: 5
   m_Name: DialogoPng1
   m_TagString: Untagged
@@ -6244,7 +6267,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342580457}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6254,31 +6277,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000030517578, y: -0.000015258789}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1342580459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342580457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f116f315761d954a9141f0e11622f59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 1342580460}
-  lines:
-  - Ehi, ciao, come stai?
-  - sono molto felice di vederti
-  - non ho molto da fare oggi
-  - tu puoi aiutarmi?
-  textSpeed: 0.05
-  esplorator: {fileID: 728891714}
-  attivo: 0
-  index: 0
 --- !u!114 &1342580460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6302,7 +6303,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 9ad269c99dcf42b7aedefd83dd5a7b9d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6376,6 +6377,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342580457}
   m_CullTransparentMesh: 1
+--- !u!114 &1342580462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342580457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f116f315761d954a9141f0e11622f59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1342580460}
+  lines:
+  - 1
+  - sono
+  - 11
+  textSpeed: 0.05
+  esplorator: {fileID: 728891714}
+  attivo: 0
+  box: {fileID: 1198003621}
+  index: 0
 --- !u!1 &1352200799
 GameObject:
   m_ObjectHideFlags: 0
@@ -7616,7 +7639,7 @@ GameObject:
   - component: {fileID: 1707328060}
   - component: {fileID: 1707328059}
   m_Layer: 5
-  m_Name: dialogueBox 1 2
+  m_Name: dialogueBox2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7633,14 +7656,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 822140576}
+  m_Children: []
   m_Father: {fileID: 1576988210}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: -102}
+  m_AnchoredPosition: {x: -101.82736, y: -145.7467}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1707328059
@@ -16322,8 +16344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esplorator: {fileID: 728891714}
-  dialogo: {fileID: 1342580459}
-  box: {fileID: 1198003621}
+  dialogo: {fileID: 0}
 --- !u!114 &2052898504 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3485000430684098015, guid: c0488c6f65b0641d0bb50d3f3c635d41,
