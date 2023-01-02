@@ -183,7 +183,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6d45acc1e11206543a85045771e68749, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 980e5fd0f14e97e45be2bcf0bc4e19ac, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -215,16 +215,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1832212950}
   frase:
-  - "L\u2019atmosfera del pianeta si sta impoverendo di ossigeno rapidamente, l\u2019aria
-    \xE8 oramai satura di CO2, irrespirabile per gli umani.  "
-  - "Molte specie animali si sono estinte, altre sono mutate per sopravvivere, oramai
-    ogni animale \xE8 predatore. "
-  - "\xABTuttavia, la razza umana era sopravvissuta\u2026\xBB nascosta in grotte
-    sotterranee, in comunit\xE0 completamente isolate le une dalle altre, sopravvive
-    con la caccia, i funghi e dei macchinari capaci di estrarre l\u2019ossigeno dall\u2019acqua.  "
-  - "La guerra ha lasciato le infrastrutture distrutte, non \xE8 possibile comunicare,
-    molte informazioni sono state dimenticate, alcune tecnologie perdute per sempre.  "
-  - "Ed \xE8 in questa situazione, 200 anni dopo, nel 2283, che inizi\xF2 la rinascita."
+  - "Dall\u2019anno 2050 in poi la crisi climatica \xE8 entrata nel pieno della sua
+    forza distruttiva, deforestazioni e riscaldamento globale hanno iniziato a far
+    calare drasticamente le piante presenti sul pianeta.   "
+  - "Il controllo delle rimanenti risorse vegetali \xE8 diventato motivo dell\u2019ultima
+    guerra mondiale.  "
+  - Furono utilizzate nuove armi, armi terribili
+  - "Il 12 maggio 2083 \xE8 ufficialmente morto l\u2019ultimo albero.  "
   textSpeed: 0.1
 --- !u!1 &1832212948
 GameObject:
@@ -294,7 +291,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278782218
-  m_fontColor: {r: 0.69803923, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.6981132, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
