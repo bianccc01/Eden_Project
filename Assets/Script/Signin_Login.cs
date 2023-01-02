@@ -128,6 +128,8 @@ public class Signin_Login : MonoBehaviour
         oss = PlayerPrefs.GetFloat("Ossigeno");
         salute = PlayerPrefs.GetFloat("CurrentHealth");
 
+        Application.Quit();
+
     }
 
     public void GetUserData(string myPlayFabId)
