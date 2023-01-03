@@ -72,10 +72,11 @@ public class esploratore : MonoBehaviour
             PlayerPrefs.SetFloat("PosizioneX",rb.position.x);
             SceneManager.LoadScene(6);
         }
-       if (theCollision.gameObject.tag == "Png1")
-       {
+        
+        if (theCollision.gameObject.tag == "Png1")
+        {
             canTalk = 1;
-       }
+        }
 
         if (theCollision.gameObject.tag == "Png2")
         {
@@ -85,6 +86,17 @@ public class esploratore : MonoBehaviour
         if (theCollision.gameObject.tag == "Png5")
         {
             canTalk = 5;
+        }
+
+        if (theCollision.gameObject.tag == "Door")
+        {
+            SceneManager.LoadScene(8);
+        }
+
+        if (theCollision.gameObject.tag == "Door3")
+        {
+            SceneManager.LoadScene(5);
+            rb.position= new Vector2 (-4.55f,20.45f);
         }
     }
 
