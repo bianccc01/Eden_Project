@@ -38,10 +38,12 @@ public class esploratore : MonoBehaviour
     void FixedUpdate()
     {
 
-        if(canTalk == 0)
+        if(canTalk == 0 || !interact)
         {
             box.SetActive(false);
         }
+
+        else box.SetActive(true);
 
        transform.Translate(moveInput*moveSpeed*Time.fixedDeltaTime);
 

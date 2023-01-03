@@ -4509,26 +4509,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exp: {fileID: 728891705}
   enemy: {fileID: 1561695521}
---- !u!1 &525256630 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7022470219543190002, guid: c87375b6aecb10e48b23f1b73d80e775,
-    type: 3}
-  m_PrefabInstance: {fileID: 1998339990}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &525256635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 525256630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 649e65a797eead148bc9ce392519970d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  esplorator: {fileID: 728891714}
-  dialogo: {fileID: 1342580462}
 --- !u!1 &549879912
 GameObject:
   m_ObjectHideFlags: 0
@@ -5501,26 +5481,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!1 &786736474 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7022470219543190002, guid: c87375b6aecb10e48b23f1b73d80e775,
-    type: 3}
-  m_PrefabInstance: {fileID: 233333455}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &786736480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786736474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a8b3d2a4c1440b488663006ac6ff40b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  esplorator: {fileID: 728891714}
-  dialogo: {fileID: 822140580}
 --- !u!1 &822140575
 GameObject:
   m_ObjectHideFlags: 0
@@ -5666,7 +5626,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 822140575}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62b531c57ffd3054b856b9a144e190b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f116f315761d954a9141f0e11622f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 822140578}
@@ -5675,9 +5635,6 @@ MonoBehaviour:
   - sono
   - 22
   textSpeed: 0.05
-  esplorator: {fileID: 728891714}
-  box: {fileID: 1198003621}
-  attivo: 0
   index: 0
 --- !u!1001 &910876603
 PrefabInstance:
@@ -6130,6 +6087,7 @@ GameObject:
   - component: {fileID: 1198003624}
   - component: {fileID: 1198003623}
   - component: {fileID: 1198003622}
+  - component: {fileID: 1198003627}
   m_Layer: 5
   m_Name: dialogueBox 1 1
   m_TagString: Untagged
@@ -6241,6 +6199,21 @@ RectTransform:
   m_AnchoredPosition: {x: 9, y: -102}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1198003627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198003621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd9e5d319d3c3b4cb8429a2ffd5e02b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 728891714}
+  box1: {fileID: 1342580457}
+  box2: {fileID: 822140575}
 --- !u!1 &1342580457
 GameObject:
   m_ObjectHideFlags: 0
@@ -6395,9 +6368,6 @@ MonoBehaviour:
   - sono
   - 11
   textSpeed: 0.05
-  esplorator: {fileID: 728891714}
-  attivo: 0
-  box: {fileID: 1198003621}
   index: 0
 --- !u!1 &1352200799
 GameObject:

@@ -9,13 +9,6 @@ public class DialogueScript : MonoBehaviour
     public string[] lines;
     public float textSpeed;
 
-
-    public esploratore esplorator;
-    
-    public bool attivo;
-
-    public GameObject box;
-
     public int index;
 
 
@@ -29,7 +22,8 @@ public class DialogueScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButtonDown(0))
         {
             if (textComponent.text == lines[index])
             {
@@ -67,30 +61,19 @@ public class DialogueScript : MonoBehaviour
         }
         else
         {
-            this.index = 0;
-            gameObject.SetActive(false);   
+            this.index = 0;  
         }
     }
 
-    public DialogueScript GetDialogue()
-    {
-        return this;
-    }
-
-    public void setIndex (int i)
+    /*public void setIndex (int i)
     {
         this.index = i+1;
         textComponent.text = lines[0];
-    }
+    }*/
 
-    public void activate ()
-    {
-        gameObject.SetActive(true);
-        box.SetActive(true);
-    }
 
-    public void disattiva ()
-    {
-        gameObject.SetActive(false);
+    private void OnDisable() {
+        this.index = 0;
+        textComponent.text = lines[0];
     }
 }
