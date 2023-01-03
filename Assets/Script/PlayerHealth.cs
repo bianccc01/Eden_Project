@@ -24,8 +24,11 @@ public class PlayerHealth : MonoBehaviour
     void OnEnable() 
     { 
         CurrentOx = PlayerPrefs.GetFloat("Ossigeno");
-        maxHealth = PlayerPrefs.GetFloat("MaxHealth");
-        currentHealth = PlayerPrefs.GetFloat("CurrentHealth");
+        maxHealth = 200;
+        //maxHealth = PlayerPrefs.GetFloat("MaxHealth");
+        currentHealth = 200;
+        
+        //currentHealth = PlayerPrefs.GetFloat("CurrentHealth");
 
     } 
 
@@ -75,7 +78,7 @@ public class PlayerHealth : MonoBehaviour
         {
             if (maxHealth > 0)
             {
-                maxHealth -= 1f;
+                maxHealth -= 0.00001f;
                 lifebar.SetMaxHealth(maxHealth);
             }
             else

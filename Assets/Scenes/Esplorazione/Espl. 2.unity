@@ -4022,8 +4022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26995a7276167154ab12e568ed986193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  esplorator: {fileID: 728891714}
-  dialogo: {fileID: 471090782}
 --- !u!1 &396308495
 GameObject:
   m_ObjectHideFlags: 0
@@ -4285,9 +4283,6 @@ MonoBehaviour:
   - Di qui non si passa
   - "tieni, prendi questo, ti aiuter\xE0 li fuori."
   textSpeed: 0.05
-  esplorator: {fileID: 728891714}
-  attivo: 0
-  box: {fileID: 1198003621}
   index: 0
 --- !u!114 &471090783
 MonoBehaviour:
@@ -4586,7 +4581,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exp: {fileID: 728891705}
-  enemy: {fileID: 0}
 --- !u!1 &525256630 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7022470219543190002, guid: c87375b6aecb10e48b23f1b73d80e775,
@@ -4605,8 +4599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649e65a797eead148bc9ce392519970d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  esplorator: {fileID: 728891714}
-  dialogo: {fileID: 1342580462}
 --- !u!1 &549879912
 GameObject:
   m_ObjectHideFlags: 0
@@ -5891,8 +5883,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649e65a797eead148bc9ce392519970d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  esplorator: {fileID: 728891714}
-  dialogo: {fileID: 0}
 --- !u!1 &997778111
 GameObject:
   m_ObjectHideFlags: 0
@@ -6446,6 +6436,7 @@ MonoBehaviour:
   player: {fileID: 728891714}
   box1: {fileID: 1342580457}
   box2: {fileID: 822140575}
+  box5: {fileID: 471090780}
 --- !u!1 &1342580457
 GameObject:
   m_ObjectHideFlags: 0
@@ -16452,8 +16443,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649e65a797eead148bc9ce392519970d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  esplorator: {fileID: 728891714}
-  dialogo: {fileID: 0}
 --- !u!114 &2052898504 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3485000430684098015, guid: c0488c6f65b0641d0bb50d3f3c635d41,

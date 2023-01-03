@@ -6,7 +6,6 @@ public class InizializzazioniMappa : MonoBehaviour
 {
 
     public GameObject exp;
-    public GameObject enemy;
     private float x;
     private float y;
     
@@ -18,10 +17,6 @@ public class InizializzazioniMappa : MonoBehaviour
 
         exp.transform.position = new Vector2(x,y);
        
-        
-
-        if(PlayerPrefs.GetInt("StatoNemico") == 0)
-         enemy.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
