@@ -24,6 +24,9 @@ public class Signin_Login : MonoBehaviour
     public HealthBar Osbar;
     float oss;
     float salute;
+    float x;
+    float y;
+
 
     public void Button_Registrazione()
     {
@@ -109,6 +112,7 @@ public class Signin_Login : MonoBehaviour
     {
         oss = PlayerPrefs.GetFloat("Ossigeno");
         salute = PlayerPrefs.GetFloat("CurrentHealth");
+
         var oss_string = oss.ToString();
         var salute_string = salute.ToString();
 
@@ -150,6 +154,11 @@ public class Signin_Login : MonoBehaviour
             Debug.Log(error.GenerateErrorReport());
         });
     }
+
+    /* public static implicit operator UpdateUserDataRequest(UpdateUserDataRequest v)
+    {
+        throw new NotImplementedException();
+    }*/
 
 
 }

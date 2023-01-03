@@ -58,5 +58,10 @@ public class Menu_iniziale : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
+    public void Button_Personaggio_Indietro()
+    {
+        SceneManager.LoadScene(3);
+    }
+
 
 }

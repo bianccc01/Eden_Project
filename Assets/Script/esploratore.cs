@@ -168,4 +168,6 @@ public class esploratore : MonoBehaviour
     {
         return this.canTalk;
     }
+
+   
 }

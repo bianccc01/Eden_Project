@@ -9,6 +9,7 @@ public class Variabili : MonoBehaviour
 
     public HealthBar Osbar;
     public Lifebar lifebar;
+    public esploratore esploratore; 
     float currentOx;
 
 
@@ -17,12 +18,11 @@ public class Variabili : MonoBehaviour
       PlayerPrefs.SetFloat("Ossigeno", Osbar.getHealth()); 
       PlayerPrefs.SetFloat("MaxHealth", lifebar.getMaxValue());
       PlayerPrefs.SetFloat("CurrentHealth",lifebar.getHealthLife());
+      
+
         PlayerPrefs.Save();
   }
-   /* public static implicit operator UpdateUserDataRequest(UpdateUserDataRequest v)
-    {
-        throw new NotImplementedException();
-    }*/
+   
 
 
 
