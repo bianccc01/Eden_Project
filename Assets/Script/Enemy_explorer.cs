@@ -8,10 +8,10 @@ using UnityEngine.UIElements;
 public class Enemy_explorer : MonoBehaviour
 {
     public Transform player;
-    public Vector2 p1 = new Vector2(2.50f, -1f);
-    public Vector2 p2 = new Vector2(6.36f, -1f);
-    public Vector2 p3 = new Vector2(6.36f, -4.2f);
-    public Vector2 p4 = new Vector2(2.50f, -4.2f);
+    public Vector2 p1;
+    public Vector2 p2;
+    public Vector2 p3;
+    public Vector2 p4;
     public Boolean pb1;
     public Boolean pb2;
     public Boolean pb3;
@@ -72,7 +72,7 @@ public class Enemy_explorer : MonoBehaviour
             //se � appena stato nel punto 1 -> va nel punto 2
             if (pb1)
             {
-                voltaNemico(rb.position.x,p2);
+                voltaNemico(rb.position.x, p2);
                 transform.position = Vector2.MoveTowards(rb.position, p2, velocitaNemico * Time.fixedDeltaTime);
                 if (rb.position == p2)
                 {
@@ -83,7 +83,7 @@ public class Enemy_explorer : MonoBehaviour
 
             if (pb2)
             {
-                voltaNemico(rb.position.x,p3);
+                voltaNemico(rb.position.x, p3);
                 transform.position = Vector2.MoveTowards(rb.position, p3, velocitaNemico * Time.fixedDeltaTime);
                 if (rb.position == p3)
                 {
@@ -94,7 +94,7 @@ public class Enemy_explorer : MonoBehaviour
 
             if (pb3)
             {
-                voltaNemico(rb.position.x,p4);
+                voltaNemico(rb.position.x, p4);
                 transform.position = Vector2.MoveTowards(rb.position, p4, velocitaNemico * Time.fixedDeltaTime);
                 if (rb.position == p4)
                 {
@@ -105,7 +105,7 @@ public class Enemy_explorer : MonoBehaviour
 
             if (pb4)
             {
-                voltaNemico(rb.position.x,p1);
+                voltaNemico(rb.position.x, p1);
                 transform.position = Vector2.MoveTowards(rb.position, p1, velocitaNemico * Time.fixedDeltaTime);
                 if (rb.position == p1)
                 {
@@ -117,7 +117,8 @@ public class Enemy_explorer : MonoBehaviour
     }
 
 
-    private void voltaNemico(float x, Vector2 p){
+    private void voltaNemico(float x, Vector2 p)
+    {
         if (x < p.x && characterScale.x == 0.75f)
         {
             characterScale.x = -0.75f;
