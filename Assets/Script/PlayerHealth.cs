@@ -15,14 +15,21 @@ public class PlayerHealth : MonoBehaviour
 
     public float CurrentOx = 100f;
 
+    public float RadioAtt = 0f;
+
+    public float RadioMax = 200f;
+
     public HealthBar OxBar;
+
+    public HealthBar RadioBar;
 
 
    
 
 
-    void OnEnable() 
+    void OnEnable()
     { 
+        RadioAtt = PlayerPrefs.GetFloat("Radioattivita");
         CurrentOx = PlayerPrefs.GetFloat("Ossigeno");
         maxHealth = 200;
         //maxHealth = PlayerPrefs.GetFloat("MaxHealth");
@@ -36,11 +43,12 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         currentHealth = maxHealth;
         lifebar.SetMaxHealth(maxHealth);
         lifebar.SetCurrentHealth(currentHealth);
         OxBar.SetMaxHealth(MaxOx);
-
+        RadioBar.SetMaxHealth(RadioMax);
       
 
     }
@@ -48,8 +56,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-       
+        RadioBar.SetHealth(RadioAtt);
         lifebar.SetCurrentHealth(currentHealth);
         if(currentHealth > maxHealth)
         {
@@ -108,13 +115,6 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
         lifebar.SetCurrentHealth(currentHealth);
-    }
-
-
-    void OnRegenerate()
-    {
-        lifebar.SetCurrentHealth(maxHealth);
-        
     }
 
     private void OnCollisionExit2D(Collision2D theCollision)
