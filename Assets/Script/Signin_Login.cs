@@ -10,7 +10,7 @@ using System;
 using TMPro;
 //using UnityEditor.PackageManager;
 using Unity.VisualScripting;
-using System.Collections.Generic;
+
 
 public class Signin_Login : MonoBehaviour
 {
@@ -21,7 +21,11 @@ public class Signin_Login : MonoBehaviour
     public TMP_InputField passwordR;
     public TMP_InputField usernameR;
     public Lifebar lifebar;
-    public HealthBar healthBar;
+    public HealthBar Osbar;
+    public Slider slider_ossigeno;
+    public Slider slider_salute;
+    float oss;
+    float salute;
 
     public void Button_Registrazione()
     {
@@ -108,8 +112,8 @@ public class Signin_Login : MonoBehaviour
         PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest()
         {
             Data = new Dictionary<string, string>() {
-            {"Ossigeno", healthBar.name},
-            {"Salute", lifebar.name}
+            {"Ossigeno", slider_ossigeno.name},
+            {"CurrentHealth", slider_salute.name }
         }
         },
         result => Debug.Log("Successfully updated user data"),
@@ -117,6 +121,15 @@ public class Signin_Login : MonoBehaviour
             Debug.Log("Got error setting user data Ancestor to Arthur");
             Debug.Log(error.GenerateErrorReport());
         });
+        PlayerPrefs.SetFloat("Ossigeno", Osbar.getHealth());
+        PlayerPrefs.SetFloat("CurrentHealth", lifebar.getHealthLife());
+        PlayerPrefs.Save();
+
+        oss = PlayerPrefs.GetFloat("Ossigeno");
+        salute = PlayerPrefs.GetFloat("CurrentHealth");
+
+        SceneManager.LoadScene(2);
+
     }
 
     public void GetUserData(string myPlayFabId)
@@ -127,9 +140,11 @@ public class Signin_Login : MonoBehaviour
             Keys = null
         }, result => {
             Debug.Log("Got user data:");
-            if (result.Data != null && result.Data.ContainsKey("Ossigeno") && result.Data.ContainsKey("Salute")) 
+            if (result.Data != null && result.Data.ContainsKey("Ossigeno") && result.Data.ContainsKey("CurrentHealth")) 
             {
-             //  healthBar.SetHealth(result.Data["Ossigeno"].Value);
+                SceneManager.LoadScene(5);
+                slider_ossigeno.value = oss;
+                slider_salute.value = salute;
             }
             else
                 Debug.Log("Errore");

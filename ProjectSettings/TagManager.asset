@@ -18,6 +18,8 @@ TagManager:
   - Png1
   - Png2
   - MitraBullet
+  - Png5
+  - Door
   layers:
   - Default
   - TransparentFX
