@@ -3802,7 +3802,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Salva
+  m_text: Pausa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4804,7 +4804,7 @@ GameObject:
   - component: {fileID: 651249263}
   - component: {fileID: 651249262}
   m_Layer: 5
-  m_Name: Salva
+  m_Name: Pausa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4875,9 +4875,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1442664162}
-        m_TargetAssemblyTypeName: Signin_Login, Assembly-CSharp
-        m_MethodName: SetUserData
+      - m_Target: {fileID: 1442664164}
+        m_TargetAssemblyTypeName: Menu_iniziale, Assembly-CSharp
+        m_MethodName: Button_Pausa
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7128,7 +7128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1442664163}
-  - component: {fileID: 1442664162}
+  - component: {fileID: 1442664164}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -7136,26 +7136,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1442664162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1442664161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11ddcbf2b466bc04f95a22ac12b11659, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  messaggio: {fileID: 0}
-  emailR: {fileID: 0}
-  passwordR: {fileID: 0}
-  usernameR: {fileID: 0}
-  lifebar: {fileID: 1069313670}
-  Osbar: {fileID: 2136820062}
-  slider_ossigeno: {fileID: 1675336777}
-  slider_salute: {fileID: 1675336776}
 --- !u!4 &1442664163
 Transform:
   m_ObjectHideFlags: 0
@@ -7171,6 +7151,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1442664164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442664161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215c782f2c535624e855428f49a41dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1460933273
 GameObject:
   m_ObjectHideFlags: 0
@@ -7823,30 +7815,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1186036207040790997, guid: 6eea94a6e8e1ade41b9f14e44c456ac2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6eea94a6e8e1ade41b9f14e44c456ac2, type: 3}
---- !u!114 &1675336776 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2501198810815215102, guid: 6eea94a6e8e1ade41b9f14e44c456ac2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1675336775}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1675336777 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2501198811935880365, guid: 6eea94a6e8e1ade41b9f14e44c456ac2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1675336775}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1744592983
 GameObject:
   m_ObjectHideFlags: 0
