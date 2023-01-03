@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -75,9 +76,12 @@ public class PlayerHealth : MonoBehaviour
             if (maxHealth > 0)
             {
                 maxHealth -= 1f;
+                lifebar.SetMaxHealth(maxHealth);
             }
-            
-            lifebar.SetMaxHealth(maxHealth);
+            else
+                SceneManager.LoadScene(7);
+
+
 
         }
         

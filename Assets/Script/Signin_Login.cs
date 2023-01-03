@@ -128,7 +128,7 @@ public class Signin_Login : MonoBehaviour
         oss = PlayerPrefs.GetFloat("Ossigeno");
         salute = PlayerPrefs.GetFloat("CurrentHealth");
 
-        Application.Quit();
+        SceneManager.LoadScene(2);
 
     }
 
