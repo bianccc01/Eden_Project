@@ -53,5 +53,10 @@ public class Menu_iniziale : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    public void Button_Pausa()
+    {
+        SceneManager.LoadScene(3);
+    }
+
 
 }

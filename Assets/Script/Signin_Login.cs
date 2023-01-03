@@ -22,8 +22,6 @@ public class Signin_Login : MonoBehaviour
     public TMP_InputField usernameR;
     public Lifebar lifebar;
     public HealthBar Osbar;
-    public Slider slider_ossigeno;
-    public Slider slider_salute;
     float oss;
     float salute;
 
@@ -109,11 +107,16 @@ public class Signin_Login : MonoBehaviour
 
     public void SetUserData()
     {
+        oss = PlayerPrefs.GetFloat("Ossigeno");
+        salute = PlayerPrefs.GetFloat("CurrentHealth");
+        var oss_string = oss.ToString();
+        var salute_string = salute.ToString();
+
         PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest()
         {
             Data = new Dictionary<string, string>() {
-            {"Ossigeno", slider_ossigeno.name},
-            {"CurrentHealth", slider_salute.name }
+            {"Ossigeno", oss_string },
+            {"CurrentHealth", salute_string }
         }
         },
         result => Debug.Log("Successfully updated user data"),
@@ -121,12 +124,6 @@ public class Signin_Login : MonoBehaviour
             Debug.Log("Got error setting user data Ancestor to Arthur");
             Debug.Log(error.GenerateErrorReport());
         });
-        PlayerPrefs.SetFloat("Ossigeno", Osbar.getHealth());
-        PlayerPrefs.SetFloat("CurrentHealth", lifebar.getHealthLife());
-        PlayerPrefs.Save();
-
-        oss = PlayerPrefs.GetFloat("Ossigeno");
-        salute = PlayerPrefs.GetFloat("CurrentHealth");
 
         SceneManager.LoadScene(2);
 
@@ -143,8 +140,8 @@ public class Signin_Login : MonoBehaviour
             if (result.Data != null && result.Data.ContainsKey("Ossigeno") && result.Data.ContainsKey("CurrentHealth")) 
             {
                 SceneManager.LoadScene(5);
-                slider_ossigeno.value = oss;
-                slider_salute.value = salute;
+                Osbar.SetHealth(float.Parse(result.Data["Ossigeno"].Value));
+                lifebar.SetCurrentHealth(float.Parse(result.Data["CurrentHealth"].Value));
             }
             else
                 Debug.Log("Errore");
