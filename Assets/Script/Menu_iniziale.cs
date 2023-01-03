@@ -48,5 +48,10 @@ public class Menu_iniziale : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void Button_GameOver_esci()
+    {
+        SceneManager.LoadScene(2);
+    }
+
 
 }
