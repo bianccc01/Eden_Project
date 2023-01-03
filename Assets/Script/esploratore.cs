@@ -79,6 +79,11 @@ public class esploratore : MonoBehaviour
         {
             canTalk = 2;
         }
+
+        if (theCollision.gameObject.tag == "Png5")
+        {
+            canTalk = 5;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D other) {
@@ -90,6 +95,11 @@ public class esploratore : MonoBehaviour
        }
 
         if (other.gameObject.tag == "Png2")
+        {
+            interact = false;
+            canTalk = 0;
+        }
+        if (other.gameObject.tag == "Png5")
         {
             interact = false;
             canTalk = 0;

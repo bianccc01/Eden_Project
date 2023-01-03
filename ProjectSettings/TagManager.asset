@@ -18,6 +18,7 @@ TagManager:
   - Png1
   - Png2
   - MitraBullet
+  - Png5
   layers:
   - Default
   - TransparentFX
