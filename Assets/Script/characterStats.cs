@@ -34,12 +34,21 @@ public class characterStats : MonoBehaviour
 
     }
 
+    public float getMaxHealt()
+    {
+        return this.maxHealth;
+    }
+
     public void setCurrentHealth(float current)
     {
         this.currentHealth = current;
         UpdateStats();
     }
 
+    public float getCurrentHealt()
+    {
+        return this.currentHealth;
+    }
 
     public void setMaxOx(float max)
     {
