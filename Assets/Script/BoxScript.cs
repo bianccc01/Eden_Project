@@ -31,6 +31,7 @@ public class BoxScript : MonoBehaviour
         {
             gameObject.SetActive(true);
             box2.SetActive(true);
+            PlayerPrefs.SetInt("HasPistola",1);
         }
 
         if(player.getTalk() == 5)

@@ -20,6 +20,8 @@ public class Menu_iniziale : MonoBehaviour
         PlayerPrefs.SetFloat("PosizioneX", -20f);
 
        PlayerPrefs.SetInt("Nemico",0);
+
+       PlayerPrefs.SetInt("HasPistola",0);
        
        SceneManager.LoadScene(5);
     }

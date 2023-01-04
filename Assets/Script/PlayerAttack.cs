@@ -135,11 +135,17 @@ public class PlayerAttack : MonoBehaviour
             arma++;
         }
 
-        else if(arma == 1)
+        else if(arma == 1 && (PlayerPrefs.GetInt("HasMitra") == 1))
         {
             pistola.gameObject.SetActive(false);
             mitra.gameObject.SetActive(true);
             arma++;
+        }
+
+        else if(arma == 1 && (PlayerPrefs.GetInt("HasMitra") == 0))
+        {
+            pistola.gameObject.SetActive(false);
+            arma = 0;
         }
 
         else if(arma == 2)

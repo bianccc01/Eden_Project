@@ -6,36 +6,43 @@ using TMPro; // INCLUDO ANCHE QUESTA USING PER POTER USARE GLI OGGETTI IN QUESTI
 public class Statistiche : MonoBehaviour
 {
     // Variabili per lo script
-    TextMeshProUGUI Testo_punteggio;
+    TextMeshProUGUI Testo_Health;
 
-    TextMeshProUGUI Testo_Timer;
+    TextMeshProUGUI Testo_Ox;
 
-    public static int totalHealt;
-    public static int actualHealt;
+    public static float totalHealt;
+    public static float actualHealt;
+    public static float actualRad;
+    public static float actualOx;
+
+
 
     // Use this for initialization
 
 
     void Start()
     {
+
+        totalHealt = PlayerPrefs.GetFloat("MaxHealth");
+        actualHealt = PlayerPrefs.GetFloat("CurrentHealth");
+
+        actualOx = PlayerPrefs.GetFloat("Ossigeno");
+        actualRad = PlayerPrefs.GetFloat("Radioattivita");
+
+        
         // Accedo al componente testo del oggetto e uso il metodo SetText per impostare il testo
-        Testo_punteggio = gameObject.GetComponent<TextMeshProUGUI>();
-        Testo_punteggio.SetText(" /");
+        Testo_Health = gameObject.GetComponent<TextMeshProUGUI>();
+        Testo_Health.SetText("Salute: " + (int)actualHealt+ " / " + (int)totalHealt + " \n \n" + "Ossigeno: " +  (int)actualOx + "% \n \n" +  "Radiazione: " + (int)actualRad + "%");
 
     }
     // Update is called once per frame
     void Update()
     {
-        // Per impostare il testo posso anche usare la proprietà text come per il testo di default
-        CurrentAmmo = player.GetCurrentAmmo();
-        TotalAmmo = player.GetTotalAmmo();
+        // Per impostare il testo posso anche usare la proprietï¿½ text come per il testo di default
+        
+        
 
-        if (TotalAmmo == -1)
-        {
-            Testo_punteggio.text = (" ");
-        }
-
-        else Testo_punteggio.text = CurrentAmmo.ToString() + "/" + TotalAmmo.ToString();
+    
 
 
 

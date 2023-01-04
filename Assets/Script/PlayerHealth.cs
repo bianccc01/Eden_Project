@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 250f; 
     public float currentHealth = 200;
 
-    public float MaxOx = 100;
+    public float MaxOx = 100f;
 
     public float CurrentOx = 100f;
 
@@ -43,7 +43,6 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         currentHealth = maxHealth;
         lifebar.SetMaxHealth(maxHealth);
         lifebar.SetCurrentHealth(currentHealth);
@@ -58,12 +57,18 @@ public class PlayerHealth : MonoBehaviour
     {
         RadioBar.SetHealth(RadioAtt);
         lifebar.SetCurrentHealth(currentHealth);
+
+        OxBar.SetHealth(CurrentOx);
+        
         if(currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
 
-        LessOx();
+        if(gameObject.scene.buildIndex != 5){
+             LessOx();
+        }
+       
         RefreshMaxHealth();
 
        
@@ -76,6 +81,8 @@ public class PlayerHealth : MonoBehaviour
         {
             TakeDamage(5);
         }
+
+        
     }
 
 
@@ -90,9 +97,6 @@ public class PlayerHealth : MonoBehaviour
             }
             else
                 SceneManager.LoadScene(7);
-
-
-
         }
         
     }
@@ -106,7 +110,6 @@ public class PlayerHealth : MonoBehaviour
         else 
         {
             CurrentOx -= 0.005f;
-            OxBar.SetHealth(CurrentOx);
         }
     }
 
