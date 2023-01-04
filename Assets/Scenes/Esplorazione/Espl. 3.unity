@@ -36297,6 +36297,11 @@ PrefabInstance:
       propertyPath: box
       value: 
       objectReference: {fileID: 1609772994}
+    - target: {fileID: 579650878193945745, guid: e625ec561ffc87f41bf15e2e2ae571b4,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 579650878193945754, guid: e625ec561ffc87f41bf15e2e2ae571b4,
         type: 3}
       propertyPath: RadioBar

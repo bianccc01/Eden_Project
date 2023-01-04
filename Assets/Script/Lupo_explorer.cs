@@ -56,6 +56,7 @@ void Update()
 
         if (player.transform.position.x < transform.position.x)
         {
+               
             characterScale.x = 0.75f;
         }
 
@@ -66,38 +67,44 @@ void Update()
 
         transform.localScale = characterScale;
     }
-    //quando il giocatore ? pi? distante di un tot l'animale si muove in circolo su 4 punti 
+    //quando il giocatore e piu' distante di un tot il lupo si aggira tra due punti 
     else
     {
         //se ? appena stato nel punto 1 -> va nel punto 2
         if (pb1)
         {
-            voltaNemico(rb.position.x, p2);
+               
+                voltaNemico(rb.position.x, p2);
             transform.position = Vector2.MoveTowards(rb.position, p2, velocitaNemicoCamminata * Time.fixedDeltaTime);
             if (rb.position == p2)
             {
-                    new WaitForSeconds(3);
-                pb1 = false;
-                pb2 = true;
+                    
+                    scambia();
             }
         }
 
         if (pb2)
         {
-            voltaNemico(rb.position.x, p1);
+              
+                voltaNemico(rb.position.x, p1);
             transform.position = Vector2.MoveTowards(rb.position, p1, velocitaNemicoCamminata * Time.fixedDeltaTime);
             if (rb.position == p1)
             {
-                    new WaitForSeconds(3);
-                pb2 = false;
-                pb1 = true;
+                   
+                    scambia();
             }
         }
 
     }
 }
-
-
+    private void scambia()
+    {
+        if (pb1) pb1 = false;
+        else pb1 = true;
+        if (pb2) pb2 = false;
+        else pb2 = true;
+    }
+   
 private void voltaNemico(float x, Vector2 p)
 {
     if (x < p.x && characterScale.x == 0.75f)
