@@ -70,8 +70,7 @@ public class EnemyFight : MonoBehaviour
         if(currentHealth == 0)
         {
             Destroy(gameObject);
-            PlayerPrefs.SetInt("StatoNemico",0);
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(8);
         
         }
     }

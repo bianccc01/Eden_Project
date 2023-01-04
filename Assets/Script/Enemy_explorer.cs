@@ -18,7 +18,6 @@ public class Enemy_explorer : MonoBehaviour
     public Boolean pb4;
 
     public float Distance;
-    public float moltiplicatoreDifficolta = 1f; //Temporaneo
     public float velocitaNemico;
 
 
@@ -52,7 +51,7 @@ public class Enemy_explorer : MonoBehaviour
         // se il giocatore e piu vicino di una certa distanza lo inseguo
         if ((Px - Ex) * (Px - Ex) + (Py - Ey) * (Py - Ey) < Distance)
         {
-            transform.position = Vector2.Lerp(rb.position, player.transform.position, moltiplicatoreDifficolta * velocitaNemico * Time.fixedDeltaTime);
+            transform.position = Vector2.Lerp(rb.position, player.transform.position, velocitaNemico * Time.fixedDeltaTime);
 
             if (player.transform.position.x < transform.position.x)
             {

@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Esplorazione/Espl. 3.unity
     guid: 4beea81d0312f364bb99322386fd11ab
+  - enabled: 1
+    path: Assets/Scenes/Fight/Fight Lupo.unity
+    guid: 5dfe9fcc141c24f4689270649c9eade0
   m_configObjects:
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
       guid: f120f1cfcf7eaa2418ca61aaa5a46e4f, type: 2}
