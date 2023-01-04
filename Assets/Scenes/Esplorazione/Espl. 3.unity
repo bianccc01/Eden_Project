@@ -35875,6 +35875,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b7d6bac5c6d1c459f3d5dbe25bc4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1741382178
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331881649}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0275867227abf7847ad5f09ef7e5936c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1763441932
 GameObject:
   m_ObjectHideFlags: 0
@@ -36094,6 +36114,11 @@ PrefabInstance:
       propertyPath: esploratore
       value: 
       objectReference: {fileID: 1741382177}
+    - target: {fileID: 579650878193945758, guid: e625ec561ffc87f41bf15e2e2ae571b4,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 579650878193945758, guid: e625ec561ffc87f41bf15e2e2ae571b4,
         type: 3}
       propertyPath: m_SortingOrder

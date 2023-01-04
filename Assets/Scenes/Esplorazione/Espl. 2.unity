@@ -5750,6 +5750,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b7d6bac5c6d1c459f3d5dbe25bc4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &728891715
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728891705}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0491b5bd65ee9db419beaf3cc6e3e16a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &775484027
 GameObject:
   m_ObjectHideFlags: 0
@@ -6289,6 +6309,21 @@ PrefabInstance:
       propertyPath: Radiobar
       value: 
       objectReference: {fileID: 1833439041}
+    - target: {fileID: 579650878193945759, guid: e625ec561ffc87f41bf15e2e2ae571b4,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 579650878193945759, guid: e625ec561ffc87f41bf15e2e2ae571b4,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.7692308
+      objectReference: {fileID: 0}
+    - target: {fileID: 579650878193945759, guid: e625ec561ffc87f41bf15e2e2ae571b4,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.3076923
+      objectReference: {fileID: 0}
     - target: {fileID: 854257286225806295, guid: e625ec561ffc87f41bf15e2e2ae571b4,
         type: 3}
       propertyPath: m_RootOrder
