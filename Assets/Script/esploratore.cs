@@ -110,7 +110,7 @@ public class esploratore : MonoBehaviour
         {
             canTalk = 2;
         }
-       
+
         if (theCollision.gameObject.tag == "Png3")
         {
             canTalk = 3;
@@ -119,7 +119,7 @@ public class esploratore : MonoBehaviour
         {
             canTalk = 5;
         }
-
+       
         if (theCollision.gameObject.tag == "Door")
         {
             SceneManager.LoadScene(8);

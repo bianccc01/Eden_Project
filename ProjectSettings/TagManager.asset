@@ -22,6 +22,7 @@ TagManager:
   - Door
   - Door3
   - Png3
+  - RicaricaOssigeno
   layers:
   - Default
   - TransparentFX

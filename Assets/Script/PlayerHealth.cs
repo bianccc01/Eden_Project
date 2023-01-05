@@ -79,7 +79,10 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(5);
         }
 
-        
+        if(theCollision.gameObject.tag== "RicaricaOssigeno")
+{
+        CurrentOx=MaxOx;
+}        
     }
 
 

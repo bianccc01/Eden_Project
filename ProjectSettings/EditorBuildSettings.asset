@@ -36,6 +36,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Fight/Fight Lupo.unity
     guid: 5dfe9fcc141c24f4689270649c9eade0
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 585e0f75677a4dd4cb6fc2c677e2ae6c,
+      type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
       guid: f120f1cfcf7eaa2418ca61aaa5a46e4f, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,

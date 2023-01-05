@@ -15,6 +15,12 @@ public class BoxInventario : MonoBehaviour
         {
             pistola.SetActive(true);
         }
+
+          if(PlayerPrefs.GetInt("HasMitra") == 1)
+        {
+            mitra.SetActive(true);
+        }
+
     }
 
     // Update is called once per frame

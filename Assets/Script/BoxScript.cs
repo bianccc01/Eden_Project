@@ -10,6 +10,7 @@ public class BoxScript : MonoBehaviour
     public GameObject box1;
     public GameObject box2;
     public GameObject box3;
+    public GameObject box4;
     public GameObject box5;
 
 
@@ -32,8 +33,7 @@ public class BoxScript : MonoBehaviour
         {
             gameObject.SetActive(true);
             box2.SetActive(true);
-            PlayerPrefs.SetInt("HasPistola",1);
-        }
+                   }
 
         if (player.getTalk() == 3)
         {
@@ -42,10 +42,17 @@ public class BoxScript : MonoBehaviour
         }
 
 
-        if (player.getTalk() == 5)
+        if (player.getTalk() == 5 && (PlayerPrefs.GetInt("HasPistola")!=1))
         {
             gameObject.SetActive(true);
             box5.SetActive(true);
+             PlayerPrefs.SetInt("HasPistola",1);
+        }
+
+        if (player.getTalk() == 5 && (PlayerPrefs.GetInt("HasPistola")==1))
+        {
+            gameObject.SetActive(true);
+            box4.SetActive(true);
         }
 
         if(player.getTalk() == 0)
@@ -54,6 +61,7 @@ public class BoxScript : MonoBehaviour
             box1.SetActive(false);
             box2.SetActive(false);
             box3.SetActive(false);
+            box4.SetActive(false);
             box5.SetActive(false);
         }
     }
