@@ -128,7 +128,9 @@ public class esploratore : MonoBehaviour
         if (theCollision.gameObject.tag == "Door3")
         {
             SceneManager.LoadScene(5);
-            rb.position= new Vector2 (-4.55f,20.45f);
+            PlayerPrefs.SetFloat("PosizioneY",20.45f);
+            PlayerPrefs.SetFloat("PosizioneX",-4.55f);
+            PlayerPrefs.SetInt("Nemico",0);
         }
     }
 

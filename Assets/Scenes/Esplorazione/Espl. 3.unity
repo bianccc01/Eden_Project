@@ -35625,6 +35625,7 @@ MonoBehaviour:
   player: {fileID: 0}
   box1: {fileID: 224458072}
   box2: {fileID: 1649946700}
+  box3: {fileID: 0}
   box5: {fileID: 187154231}
 --- !u!114 &1609772997
 MonoBehaviour:

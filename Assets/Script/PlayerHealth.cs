@@ -31,11 +31,8 @@ public class PlayerHealth : MonoBehaviour
     { 
         RadioAtt = PlayerPrefs.GetFloat("Radioattivita");
         CurrentOx = PlayerPrefs.GetFloat("Ossigeno");
-        maxHealth = 200;
-        //maxHealth = PlayerPrefs.GetFloat("MaxHealth");
-        currentHealth = 200;
-        
-        //currentHealth = PlayerPrefs.GetFloat("CurrentHealth");
+        maxHealth = PlayerPrefs.GetFloat("MaxHealth");
+        currentHealth = PlayerPrefs.GetFloat("CurrentHealth");
 
     } 
 
