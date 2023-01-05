@@ -12,6 +12,7 @@ public class esploratore : MonoBehaviour
     private Vector2 moveInput;
     //public DialogueScript Dialogo;
     public Inventario inventario;
+    public Animator animator;
 
     public GameObject box;
 
@@ -169,26 +170,32 @@ public class esploratore : MonoBehaviour
     public void down()
     {
         moveInput = new Vector2(0,-1);
+        animator.SetFloat("SpeedY", -1.5f);
     }
 
     public void left()
     {
         moveInput = new Vector2(-1,0);
+        animator.SetFloat("SpeedX", -1.5f);
     }
 
     public void right()
     {
         moveInput = new Vector2(1,0);
+        animator.SetFloat("SpeedX", 1.5f);
     }
 
     public void up()
     {
         moveInput = new Vector2(0,1);
+        animator.SetFloat("SpeedY", 1.5f);
     }
 
     public void stop()
     {
         moveInput = new Vector2(0,0);
+        animator.SetFloat("SpeedX", 0f);
+        animator.SetFloat("SpeedY", 0f);
     }
 
 
