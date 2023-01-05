@@ -6331,6 +6331,12 @@ PrefabInstance:
       propertyPath: Radiobar
       value: 
       objectReference: {fileID: 1833439041}
+    - target: {fileID: 579650878193945758, guid: e625ec561ffc87f41bf15e2e2ae571b4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8793639957104055765, guid: 9c447c54c8e0416e9446cadb88c48fd3,
+        type: 3}
     - target: {fileID: 579650878193945759, guid: e625ec561ffc87f41bf15e2e2ae571b4,
         type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
