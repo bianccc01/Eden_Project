@@ -194,8 +194,8 @@ public class esploratore : MonoBehaviour
     public void stop()
     {
         moveInput = new Vector2(0,0);
-        animator.SetFloat("SpeedX", 0f);
-        animator.SetFloat("SpeedY", 0f);
+        animator.SetFloat("SpeedX", 2.5f);
+        animator.SetFloat("SpeedY", 2.5f);
     }
 
 
