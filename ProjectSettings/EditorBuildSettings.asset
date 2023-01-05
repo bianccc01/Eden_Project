@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Esplorazione/Espl. 2.unity
     guid: f2c1a02bb2cf7364eb538f394a99ef4a
   - enabled: 1
-    path: Assets/Scenes/Fight/Fight V.2.unity
+    path: Assets/Scenes/Fight/Fight Mucca.unity
     guid: fc7671df301285d4e9a1024cace5408c
   - enabled: 1
     path: Assets/Scenes/Menu/Game_Over.unity
