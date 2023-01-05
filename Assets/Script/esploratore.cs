@@ -19,8 +19,7 @@ public class esploratore : MonoBehaviour
 
     public bool interact;
 
-
-
+    
     private void Awake()
     {
         inventario = new Inventario(9);
@@ -111,7 +110,11 @@ public class esploratore : MonoBehaviour
         {
             canTalk = 2;
         }
-
+       
+        if (theCollision.gameObject.tag == "Png3")
+        {
+            canTalk = 3;
+        }
         if (theCollision.gameObject.tag == "Png5")
         {
             canTalk = 5;
@@ -142,6 +145,13 @@ public class esploratore : MonoBehaviour
             interact = false;
             canTalk = 0;
         }
+
+        if (other.gameObject.tag == "Png3")
+        {
+            interact = false;
+            canTalk = 0;
+        }
+
         if (other.gameObject.tag == "Png5")
         {
             interact = false;

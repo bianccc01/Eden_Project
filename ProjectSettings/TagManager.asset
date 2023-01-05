@@ -21,6 +21,7 @@ TagManager:
   - Png5
   - Door
   - Door3
+  - Png3
   layers:
   - Default
   - TransparentFX
