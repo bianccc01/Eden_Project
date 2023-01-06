@@ -22,8 +22,10 @@ public class Signin_Login : MonoBehaviour
     public TMP_InputField usernameR;
     public Lifebar lifebar;
     public HealthBar Osbar;
+    public HealthBar radioAtt;
     float oss;
     float salute;
+    float radioatt;
     float x;
     float y;
 
@@ -112,15 +114,18 @@ public class Signin_Login : MonoBehaviour
     {
         oss = PlayerPrefs.GetFloat("Ossigeno");
         salute = PlayerPrefs.GetFloat("CurrentHealth");
+        radioatt = PlayerPrefs.GetFloat("Radioattivita");
 
         var oss_string = oss.ToString();
         var salute_string = salute.ToString();
+        var radioatt_string = radioatt.ToString();
 
         PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest()
         {
             Data = new Dictionary<string, string>() {
             {"Ossigeno", oss_string },
-            {"CurrentHealth", salute_string }
+            {"CurrentHealth", salute_string },
+            {"Radioattivita", radioatt_string }
         }
         },
         result => Debug.Log("Successfully updated user data"),
@@ -146,6 +151,8 @@ public class Signin_Login : MonoBehaviour
                 SceneManager.LoadScene(5);
                 Osbar.SetHealth(float.Parse(result.Data["Ossigeno"].Value));
                 lifebar.SetCurrentHealth(float.Parse(result.Data["CurrentHealth"].Value));
+                radioAtt.SetHealth(float.Parse(result.Data["Radioattivita"].Value));
+
             }
             else
                 Debug.Log("Errore");
