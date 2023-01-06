@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public float fallingGravityScale = 40; //Gravità per la discesa verso il basso
 
     public int platform;
+    public AudioSource audiosource;
 
 
 
@@ -133,6 +134,7 @@ public class Player : MonoBehaviour
     {
         if (jump == true && isGrounded == true)
         {
+            audiosource.Play();
             rb.AddForce(Vector2.up * jumpamount, ForceMode2D.Impulse);
 
             RefreshGravity();
