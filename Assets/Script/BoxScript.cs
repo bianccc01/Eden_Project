@@ -49,7 +49,7 @@ public class BoxScript : MonoBehaviour
              PlayerPrefs.SetInt("HasPistola",1);
         }
 
-        if (player.getTalk() == 5 && (PlayerPrefs.GetInt("HasPistola")==1))
+        if (player.getTalk() == 5 && (PlayerPrefs.GetInt("HasPistola")==1) && !box5.activeSelf)
         {
             gameObject.SetActive(true);
             box4.SetActive(true);
