@@ -35,6 +35,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fight/Fight Lupo.unity
     guid: 5dfe9fcc141c24f4689270649c9eade0
+  - enabled: 1
+    path: Assets/Scenes/Story/Introduzione.unity
+    guid: 22b7cb5f3fa491f4ebeaf4a770b9ecf8
+  - enabled: 1
+    path: Assets/Scenes/Story/Introduzione.2.unity
+    guid: f840e8e5ec62eda4fa6a8ee95da944f0
+  - enabled: 1
+    path: Assets/Scenes/Story/Introduzione.3.unity
+    guid: 255516e2a8f080e4f9829f0497842868
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 585e0f75677a4dd4cb6fc2c677e2ae6c,
       type: 2}

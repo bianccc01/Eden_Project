@@ -22,6 +22,7 @@ public float moltiplicatoreDifficolta = 1f; //Temporaneo
 public float velocitaNemicoCamminata;
 public float velocitaNemicoInseguimento;
 
+public float time;
 
 Vector3 characterScale;
 
@@ -73,26 +74,36 @@ void Update()
         //se ? appena stato nel punto 1 -> va nel punto 2
         if (pb1)
         {
-               
+               if(time<3) {
+                    time+= Time.deltaTime;
+                }
+else{
                 voltaNemico(rb.position.x, p2);
             transform.position = Vector2.MoveTowards(rb.position, p2, velocitaNemicoCamminata * Time.fixedDeltaTime);
             if (rb.position == p2)
             {
                     
                     scambia();
+                    time=0;
             }
+}
         }
 
         if (pb2)
         {
-              
+               if(time<3) {
+                    time+= Time.deltaTime;
+                }
+else{
                 voltaNemico(rb.position.x, p1);
             transform.position = Vector2.MoveTowards(rb.position, p1, velocitaNemicoCamminata * Time.fixedDeltaTime);
             if (rb.position == p1)
             {
                    
                     scambia();
+                    time=0;
             }
+}
         }
 
     }

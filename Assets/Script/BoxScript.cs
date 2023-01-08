@@ -12,6 +12,8 @@ public class BoxScript : MonoBehaviour
     public GameObject box3;
     public GameObject box4;
     public GameObject box5;
+    public GameObject box6;
+    public GameObject box7;
 
 
     // Start is called before the first frame update
@@ -53,6 +55,19 @@ public class BoxScript : MonoBehaviour
         {
             gameObject.SetActive(true);
             box4.SetActive(true);
+        }
+
+        if (player.getTalk() == 6 && (PlayerPrefs.GetInt("HasMitra")!=1))
+        {
+            gameObject.SetActive(true);
+            box6.SetActive(true);
+             PlayerPrefs.SetInt("HasMitra",1);
+        }
+
+         if (player.getTalk() == 6 && (PlayerPrefs.GetInt("HasMitra")==1) && !box6.activeSelf)
+        {
+            gameObject.SetActive(true);
+            box7.SetActive(true);
         }
 
         if(player.getTalk() == 0)

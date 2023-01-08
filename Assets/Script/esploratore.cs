@@ -120,6 +120,11 @@ public class esploratore : MonoBehaviour
         {
             canTalk = 5;
         }
+
+        if (theCollision.gameObject.tag == "Png6")
+        {
+            canTalk = 6;
+        }
        
         if (theCollision.gameObject.tag == "Door")
         {
@@ -156,6 +161,12 @@ public class esploratore : MonoBehaviour
         }
 
         if (other.gameObject.tag == "Png5")
+        {
+            interact = false;
+            canTalk = 0;
+        }
+        
+         if (other.gameObject.tag == "Png6")
         {
             interact = false;
             canTalk = 0;
