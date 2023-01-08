@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
     public float gravityScale = 10; //Gravità per il salto verso l'alto
     public float fallingGravityScale = 40; //Gravità per la discesa verso il basso
 
+
+    public Animator animator;
+
     public int platform;
     public AudioSource audiosource;
 
@@ -151,12 +154,12 @@ public class Player : MonoBehaviour
 
         if (moveInput.x > 0)
         {
-            characterScale.x = 0.9f;
+            characterScale.x = -0.9f;
         }
 
         if (moveInput.x < 0)
         {
-            characterScale.x = -0.9f;
+            characterScale.x = 0.9f;
         }
 
         transform.localScale = characterScale;
@@ -203,11 +206,13 @@ public class Player : MonoBehaviour
     public void left()
     {
         moveInput = new Vector2(-1,0);
+        animator.SetFloat("SpeedX", -1.5f);
     }
 
     public void right()
     {
         moveInput = new Vector2(1,0);
+        animator.SetFloat("SpeedX", 1.5f);
     }
 
     public void up()
@@ -218,12 +223,14 @@ public class Player : MonoBehaviour
     public void stop()
     {
         moveInput = new Vector2(0,0);
+        animator.SetFloat("SpeedX", 2.5f);
     }
 
     public void PlayerJumpTouch()
     {
         if (isGrounded == true)
         {
+            audiosource.Play();
             rb.AddForce(Vector2.up * jumpamount, ForceMode2D.Impulse);
 
             RefreshGravity();
