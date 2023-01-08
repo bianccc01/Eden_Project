@@ -6926,6 +6926,7 @@ MonoBehaviour:
   moltiplicatoreDifficolta: 1
   velocitaNemicoCamminata: 1
   velocitaNemicoInseguimento: 5
+  time: 0
 --- !u!1001 &738502810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36530,7 +36531,7 @@ Animator:
   m_GameObject: {fileID: 331881649}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0275867227abf7847ad5f09ef7e5936c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0491b5bd65ee9db419beaf3cc6e3e16a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

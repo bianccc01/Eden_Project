@@ -6390,6 +6390,11 @@ PrefabInstance:
       objectReference: {fileID: 1198003621}
     - target: {fileID: 579650878193945745, guid: e625ec561ffc87f41bf15e2e2ae571b4,
         type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 728891715}
+    - target: {fileID: 579650878193945745, guid: e625ec561ffc87f41bf15e2e2ae571b4,
+        type: 3}
       propertyPath: moveSpeed
       value: 8
       objectReference: {fileID: 0}
@@ -6823,6 +6828,8 @@ MonoBehaviour:
   box3: {fileID: 1552917344}
   box4: {fileID: 538839664}
   box5: {fileID: 471090780}
+  box6: {fileID: 0}
+  box7: {fileID: 0}
 --- !u!1 &1342580457
 GameObject:
   m_ObjectHideFlags: 0
