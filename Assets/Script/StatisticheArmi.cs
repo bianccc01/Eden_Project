@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro; // INCLUDO ANCHE QUESTA USING PER POTER USARE GLI OGGETTI IN QUESTIONE
 
-public class Statistiche : MonoBehaviour
+public class StatisticheArmi : MonoBehaviour
 {
     // Variabili per lo script
     TextMeshProUGUI Testo_Health;
 
     TextMeshProUGUI Testo_Ox;
 
-    public static float totalHealt;
-    public static float actualHealt;
-    public static float actualRad;
-    public static float actualOx;
+    public static int ammo;
 
 
 
@@ -23,16 +20,12 @@ public class Statistiche : MonoBehaviour
     void Start()
     {
 
-        totalHealt = PlayerPrefs.GetFloat("MaxHealth");
-        actualHealt = PlayerPrefs.GetFloat("CurrentHealth");
-
-        actualOx = PlayerPrefs.GetFloat("Ossigeno");
-        actualRad = PlayerPrefs.GetFloat("Radioattivita");
+        ammo = PlayerPrefs.GetInt("MunizioniPistola");
 
         
         // Accedo al componente testo del oggetto e uso il metodo SetText per impostare il testo
         Testo_Health = gameObject.GetComponent<TextMeshProUGUI>();
-        Testo_Health.SetText("Statistiche: \n \nSalute: " + (int)actualHealt+ " / " + (int)totalHealt + " \n \n" + "Ossigeno: " +  (int)actualOx + "% \n \n" +  "Radiazione: " + (int)actualRad + "%");
+        Testo_Health.SetText(ammo+"                                              "+ammo);
 
     }
     // Update is called once per frame

@@ -36,6 +36,11 @@ public class PlayerAttack : MonoBehaviour
         arma = 0;
     }
 
+    private void OnDisable() {
+        
+        PlayerPrefs.GetInt("MunizioniPistola",bullets*TotalAmmo);
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
