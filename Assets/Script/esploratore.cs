@@ -100,8 +100,7 @@ public class esploratore : MonoBehaviour
             
         }
 
-        
-        
+                
         if (theCollision.gameObject.tag == "Png1")
         {
             canTalk = 1;

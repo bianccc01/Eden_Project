@@ -24,6 +24,7 @@ TagManager:
   - Png3
   - RicaricaOssigeno
   - Png6
+  - Radiation
   layers:
   - Default
   - TransparentFX

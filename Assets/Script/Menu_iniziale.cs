@@ -12,19 +12,8 @@ public class Menu_iniziale : MonoBehaviour
 
     public void Button_Play()
     {
-        PlayerPrefs.SetFloat("Ossigeno", 100f);
-        PlayerPrefs.SetFloat("MaxHealth", 250f);
-        PlayerPrefs.SetFloat("Radioattivita", 0);
-        PlayerPrefs.SetFloat("CurrentHealth", 250f);
-
-        PlayerPrefs.SetFloat("PosizioneY", 15f);
-        PlayerPrefs.SetFloat("PosizioneX", -20f);
-
-       PlayerPrefs.SetInt("Nemico",0);
-
-       PlayerPrefs.SetInt("HasPistola",0);
        
-       SceneManager.LoadScene(5);
+       SceneManager.LoadScene(10);
     }
 
     public void Button_Opzioni()
