@@ -12,6 +12,8 @@ public class PlayerAttack : MonoBehaviour
     public GameObject mitra;
     public GameObject mitraBullet;
 
+    public Rigidbody2D rb;
+
 
 
     private float time = 1.5f;

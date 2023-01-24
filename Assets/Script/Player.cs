@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+
+
         if (canMove)
         {
             PlayerMove();
@@ -47,6 +49,7 @@ public class Player : MonoBehaviour
     {
         if (theCollision.gameObject.tag == "Floor")
         {
+            animator.SetFloat("Jump", 0f);
             isGrounded = true;
             canMove = true;
         }
@@ -131,14 +134,14 @@ public class Player : MonoBehaviour
     }
 
 
-    
-
     private void PlayerJump()
     {
         if (jump == true && isGrounded == true)
         {
             audiosource.Play();
+            //rb.velocity = new Vector2(rb.velocity.x,jumpamount);
             rb.AddForce(Vector2.up * jumpamount, ForceMode2D.Impulse);
+            animator.SetFloat("Jump", 1.5f);
 
             RefreshGravity();
             jump = false;
@@ -149,6 +152,7 @@ public class Player : MonoBehaviour
     {
 
         transform.Translate(moveInput * moveSpeed * Time.fixedDeltaTime);
+        //rb.velocity= new Vector2(moveInput.x * moveSpeed,rb.velocity.y);
 
         Vector3 characterScale = transform.localScale;
 
@@ -198,6 +202,7 @@ public class Player : MonoBehaviour
     }
 
     
+
     public void down()
     {
         moveInput = new Vector2(0,-1);
@@ -224,6 +229,7 @@ public class Player : MonoBehaviour
     {
         moveInput = new Vector2(0,0);
         animator.SetFloat("SpeedX", 2.5f);
+        
     }
 
     public void PlayerJumpTouch()
@@ -231,8 +237,9 @@ public class Player : MonoBehaviour
         if (isGrounded == true)
         {
             audiosource.Play();
+            //rb.velocity = new Vector2(rb.velocity.x,23);
             rb.AddForce(Vector2.up * jumpamount, ForceMode2D.Impulse);
-
+            animator.SetFloat("Jump", 1.5f);
             RefreshGravity();
         }
     }
