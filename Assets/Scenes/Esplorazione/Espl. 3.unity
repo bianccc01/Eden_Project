@@ -6810,12 +6810,12 @@ PrefabInstance:
     - target: {fileID: 6354628933541705945, guid: f79ea1442fdaebd46b2a38150e4e1e91,
         type: 3}
       propertyPath: m_Name
-      value: Enemy_explorer4
+      value: Enemy_explorer3
       objectReference: {fileID: 0}
     - target: {fileID: 6354628933541705945, guid: f79ea1442fdaebd46b2a38150e4e1e91,
         type: 3}
       propertyPath: m_TagString
-      value: Lupo
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8096920735691077053, guid: f79ea1442fdaebd46b2a38150e4e1e91,
         type: 3}
@@ -7513,12 +7513,12 @@ PrefabInstance:
     - target: {fileID: 6354628933541705945, guid: f79ea1442fdaebd46b2a38150e4e1e91,
         type: 3}
       propertyPath: m_Name
-      value: Enemy_explorer4 (2)
+      value: Enemy_explorer2
       objectReference: {fileID: 0}
     - target: {fileID: 6354628933541705945, guid: f79ea1442fdaebd46b2a38150e4e1e91,
         type: 3}
       propertyPath: m_TagString
-      value: Lupo
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8096920735691077053, guid: f79ea1442fdaebd46b2a38150e4e1e91,
         type: 3}
@@ -7913,10 +7913,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exp: {fileID: 331881649}
-  wolf1: {fileID: 686324290}
-  wolf2: {fileID: 0}
-  wolf3: {fileID: 0}
-  cow: {fileID: 730351974}
+  wolf1: {fileID: 1068614847}
+  wolf2: {fileID: 911689616}
+  wolf3: {fileID: 730351974}
+  cow: {fileID: 686324290}
 --- !u!82 &1057282587
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8078,12 +8078,12 @@ PrefabInstance:
     - target: {fileID: 6354628933541705945, guid: f79ea1442fdaebd46b2a38150e4e1e91,
         type: 3}
       propertyPath: m_Name
-      value: Enemy_explorer4 (1)
+      value: Enemy_explorer1
       objectReference: {fileID: 0}
     - target: {fileID: 6354628933541705945, guid: f79ea1442fdaebd46b2a38150e4e1e91,
         type: 3}
       propertyPath: m_TagString
-      value: Lupo
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8096920735691077053, guid: f79ea1442fdaebd46b2a38150e4e1e91,
         type: 3}
@@ -8416,7 +8416,7 @@ PrefabInstance:
     - target: {fileID: 6354628933541705945, guid: f79ea1442fdaebd46b2a38150e4e1e91,
         type: 3}
       propertyPath: m_Name
-      value: Enemy_explorer1
+      value: Enemy_explorer4
       objectReference: {fileID: 0}
     - target: {fileID: 8096920735691077053, guid: f79ea1442fdaebd46b2a38150e4e1e91,
         type: 3}

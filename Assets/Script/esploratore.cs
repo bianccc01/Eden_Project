@@ -74,25 +74,25 @@ public class esploratore : MonoBehaviour
             if(theCollision.gameObject.ToString() == "Enemy_explorer3 (UnityEngine.GameObject)")
             {
                 PlayerPrefs.SetInt("Nemico",3);
-                SceneManager.LoadScene(6);
+                SceneManager.LoadScene(9);
             }
 
             if(theCollision.gameObject.ToString() == "Enemy_explorer1 (UnityEngine.GameObject)")
             {
                 PlayerPrefs.SetInt("Nemico",1);
-                SceneManager.LoadScene(6);
+                SceneManager.LoadScene(9);
             }
 
             if(theCollision.gameObject.ToString() == "Enemy_explorer2 (UnityEngine.GameObject)")
             {
                 PlayerPrefs.SetInt("Nemico",2);
-                SceneManager.LoadScene(6);
+                SceneManager.LoadScene(9);
             }
 
             if(theCollision.gameObject.ToString() == "Enemy_explorer4 (UnityEngine.GameObject)")
             {
                 PlayerPrefs.SetInt("Nemico",4);
-                SceneManager.LoadScene(9);
+                SceneManager.LoadScene(6);
             }
             
             
@@ -133,7 +133,7 @@ public class esploratore : MonoBehaviour
         if (theCollision.gameObject.tag == "Door3")
         {
             SceneManager.LoadScene(5);
-            PlayerPrefs.SetFloat("PosizioneY",20.45f);
+            PlayerPrefs.SetFloat("PosizioneY",20f);
             PlayerPrefs.SetFloat("PosizioneX",-4.55f);
             PlayerPrefs.SetInt("Nemico",0);
         }

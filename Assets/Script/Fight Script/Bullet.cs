@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         Transform playerTrasform = FindObjectOfType<Player>().transform;
-        rb.velocity = transform.right * playerTrasform.localScale.x * bulletSpeed;
+        rb.velocity = transform.right * playerTrasform.localScale.x * bulletSpeed * (-1);
     }
 
     void FixedUpdate() {

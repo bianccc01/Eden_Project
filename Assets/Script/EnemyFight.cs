@@ -41,7 +41,7 @@ public class EnemyFight : MonoBehaviour
                 characterScale.x = characterScale.x * (-1);
             }
             transform.position = Vector2.MoveTowards(rb.position,
-            new Vector2(transform.position.x + (characterScale.x * (-4)) ,rb.position.y),
+            new Vector2(transform.position.x + (characterScale.x * (4)) ,rb.position.y),
             moltiplicatoreDifficolta* velocitaNemico * Time.fixedDeltaTime);
         }
 
@@ -51,11 +51,11 @@ public class EnemyFight : MonoBehaviour
             moltiplicatoreDifficolta * velocitaNemico * Time.fixedDeltaTime);
 
             if(player.transform.position.x < transform.position.x){
-            characterScale.x = 0.9f;
+            characterScale.x = -1.5f;
         }
 
             if(player.transform.position.x > transform.position.x){
-            characterScale.x = -0.9f;
+            characterScale.x = 1.5f;
         }
 
         

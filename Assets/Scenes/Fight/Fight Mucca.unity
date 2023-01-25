@@ -5146,6 +5146,12 @@ PrefabInstance:
       objectReference: {fileID: 1662763900}
     - target: {fileID: 244724761029219431, guid: d0b500eecb32f9948aea8dfb777bd234,
         type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 8734853543654111075, guid: 500e3d24bbf4ef24e8e2e4c14f44270c,
+        type: 3}
+    - target: {fileID: 244724761029219431, guid: d0b500eecb32f9948aea8dfb777bd234,
+        type: 3}
       propertyPath: pistola
       value: 
       objectReference: {fileID: 1247482973}
@@ -5153,7 +5159,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mitraBullet
       value: 
-      objectReference: {fileID: 5784798167838374688, guid: 8125659dc09cc414dbf523b3ab67b6d2,
+      objectReference: {fileID: 2902164825699522651, guid: 8125659dc09cc414dbf523b3ab67b6d2,
         type: 3}
     - target: {fileID: 244724762339912673, guid: d0b500eecb32f9948aea8dfb777bd234,
         type: 3}
@@ -5162,8 +5168,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 244724762339912678, guid: d0b500eecb32f9948aea8dfb777bd234,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 244724762339912678, guid: d0b500eecb32f9948aea8dfb777bd234,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.639
+      value: -0.649
       objectReference: {fileID: 0}
     - target: {fileID: 244724762339912678, guid: d0b500eecb32f9948aea8dfb777bd234,
         type: 3}
@@ -5206,6 +5217,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -6628414004274166170, guid: abb480a6baaf485c81c17a7f3c4fdc42,
         type: 3}
+    - target: {fileID: 1214222262754952160, guid: d0b500eecb32f9948aea8dfb777bd234,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2086962082628315097, guid: d0b500eecb32f9948aea8dfb777bd234,
         type: 3}
       propertyPath: m_IsActive
@@ -5349,7 +5365,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 8333481726314500824, guid: 23d536d6083344698e17aa8fc049b99f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5626,6 +5642,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 80743896688646038, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.419162
+      objectReference: {fileID: 0}
+    - target: {fileID: 80743896688646038, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.09083792
+      objectReference: {fileID: 0}
     - target: {fileID: 80743896688646041, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
         type: 3}
       propertyPath: m_Sprite
@@ -5660,12 +5686,12 @@ PrefabInstance:
     - target: {fileID: 6373651353662639641, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6373651353662639641, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6373651353662639641, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
         type: 3}
@@ -5675,12 +5701,12 @@ PrefabInstance:
     - target: {fileID: 6373651353662639641, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.39
+      value: 7.05
       objectReference: {fileID: 0}
     - target: {fileID: 6373651353662639641, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.47
+      value: -3.258
       objectReference: {fileID: 0}
     - target: {fileID: 6373651353662639641, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
         type: 3}
@@ -5722,7 +5748,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 80743896688646038, guid: 284ede7ea554e2645b0fd5a04eb44fd6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 284ede7ea554e2645b0fd5a04eb44fd6, type: 3}
 --- !u!1 &2032218651 stripped
 GameObject:
@@ -5846,6 +5873,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &2032218659
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032218651}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.030667126, y: -0.13529608}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.93866575, y: 0.65724987}
+  m_EdgeRadius: 0
 --- !u!224 &2033978758 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2501198811759854234, guid: 5b61d7fc3d01ab24c8eb3d15f014b0fa,

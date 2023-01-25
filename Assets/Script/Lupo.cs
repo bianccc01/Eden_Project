@@ -117,7 +117,7 @@ public class Lupo : MonoBehaviour
                 transform.position = Vector2.MoveTowards(rb.position,new Vector2(puntoX,rb.position.y),velocitaNemico * Time.fixedDeltaTime);
             
             if(rb.position == new Vector2(puntoX,rb.position.y))
-            rb.velocity = new Vector2(12,23);
+            rb.velocity = new Vector2(12,29);
              RefreshGravity();
             }
 
@@ -127,7 +127,7 @@ public class Lupo : MonoBehaviour
                 transform.position = Vector2.MoveTowards(rb.position,new Vector2(puntoX,rb.position.y),velocitaNemico * Time.fixedDeltaTime);
             
             if(rb.position == new Vector2(puntoX,rb.position.y))
-            rb.velocity = new Vector2(-20,30);
+            rb.velocity = new Vector2(-17,34);
              RefreshGravity();
             }
 
