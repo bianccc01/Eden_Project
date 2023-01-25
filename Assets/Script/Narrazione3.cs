@@ -77,6 +77,8 @@ public class Narrazione3 : MonoBehaviour
        PlayerPrefs.SetInt("HasPistola",0);
        PlayerPrefs.SetInt("HasMitra",0);
 
+       PlayerPrefs.SetInt("CarneLupo",0);
+
        PlayerPrefs.SetInt("MunizioniPistola",20);
        
        SceneManager.LoadScene(5);

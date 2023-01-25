@@ -26,6 +26,7 @@ public class InizializzazioniMappa : MonoBehaviour
         if(PlayerPrefs.GetInt("Nemico") == 3)
         {
             wolf3.SetActive(false);
+            PlayerPrefs.SetInt("CarneLupo",PlayerPrefs.GetInt("CarneLupo")+1);
         }
 
         if(PlayerPrefs.GetInt("Nemico") == 2)
