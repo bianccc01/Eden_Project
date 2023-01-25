@@ -76,13 +76,23 @@ public class PlayerHealth : MonoBehaviour
     {
         if (theCollision.gameObject.tag == "Enemy")
         {
-            TakeDamage(5);
+            TakeDamage(5f);
         }
+
+        
 
         if(theCollision.gameObject.tag== "RicaricaOssigeno")
 {
         CurrentOx=MaxOx;
 }        
+    }
+
+    private void OnCollisionStay2D(Collision2D other) {
+        
+        if (other.gameObject.tag == "Lupo")
+        {
+            TakeDamage(0.5f);
+        }
     }
 
 
@@ -92,7 +102,7 @@ public class PlayerHealth : MonoBehaviour
         {
             if (maxHealth > 0)
             {
-                maxHealth -= 0.00001f;
+                maxHealth -= 0.01f;
                 lifebar.SetMaxHealth(maxHealth);
             }
             else
@@ -114,7 +124,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
-    void TakeDamage(int damage)
+    void TakeDamage(float damage)
     {
         currentHealth -= damage;
         lifebar.SetCurrentHealth(currentHealth);

@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Lupo : MonoBehaviour
 {
     public Player player2;
-    public float moltiplicatoreDifficolta = 1f; //Temporaneo
     public float velocitaNemico;
 
     public int maxHealth = 200; //Test per un eventuale barra della salute
@@ -103,7 +102,7 @@ public class Lupo : MonoBehaviour
             {
                 puntoX = -3f;
                 transform.position = Vector2.MoveTowards(rb.position,new Vector2(puntoX,rb.position.y),
-                moltiplicatoreDifficolta * velocitaNemico * Time.fixedDeltaTime);
+                velocitaNemico * Time.fixedDeltaTime);
             if(rb.position == new Vector2(puntoX,rb.position.y)) {
             rb.velocity = new Vector2(10,25);
              RefreshGravity();
@@ -159,11 +158,11 @@ public class Lupo : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Bullet"){
-            TakeDamage(100);
+            TakeDamage(10);
         }
 
         if(other.gameObject.tag == "MitraBullet"){
-            TakeDamage(1);
+            TakeDamage(10);
         }
     }
 

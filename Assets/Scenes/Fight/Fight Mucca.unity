@@ -5134,6 +5134,11 @@ PrefabInstance:
       propertyPath: RadioBar
       value: 
       objectReference: {fileID: 1823843327}
+    - target: {fileID: 244724761029219428, guid: d0b500eecb32f9948aea8dfb777bd234,
+        type: 3}
+      propertyPath: currentHealth
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 244724761029219431, guid: d0b500eecb32f9948aea8dfb777bd234,
         type: 3}
       propertyPath: rb
@@ -5261,7 +5266,7 @@ PrefabInstance:
     - target: {fileID: 6606710920751493169, guid: d0b500eecb32f9948aea8dfb777bd234,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.207
+      value: 0.137
       objectReference: {fileID: 0}
     - target: {fileID: 7195622879721222408, guid: d0b500eecb32f9948aea8dfb777bd234,
         type: 3}
@@ -5317,8 +5322,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662763900}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.426, y: 0.228, z: 0}
-  m_LocalScale: {x: -0.6, y: 0.6, z: 1}
+  m_LocalPosition: {x: -0.406, y: 0.228, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 292975406}
@@ -5365,7 +5370,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 8333481726314500824, guid: 23d536d6083344698e17aa8fc049b99f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5673,6 +5678,16 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 635876890}
+    - target: {fileID: 80743896688646043, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
+        type: 3}
+      propertyPath: maxHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 80743896688646043, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
+        type: 3}
+      propertyPath: velocitaNemico
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2986163626965765666, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
         type: 3}
       propertyPath: m_Name

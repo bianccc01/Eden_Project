@@ -6,10 +6,9 @@ using UnityEngine.SceneManagement;
 public class EnemyFight : MonoBehaviour
 {
     public Transform player;
-    public float moltiplicatoreDifficolta = 1f; //Temporaneo
     public float velocitaNemico;
 
-    public int maxHealth = 200; //Test per un eventuale barra della salute
+    public int maxHealth = 400; //Test per un eventuale barra della salute
     public int currentHealth;
 
     public HealthBar healthBar;
@@ -42,13 +41,13 @@ public class EnemyFight : MonoBehaviour
             }
             transform.position = Vector2.MoveTowards(rb.position,
             new Vector2(transform.position.x + (characterScale.x * (4)) ,rb.position.y),
-            moltiplicatoreDifficolta* velocitaNemico * Time.fixedDeltaTime);
+            velocitaNemico * Time.fixedDeltaTime);
         }
 
         else 
         {
             transform.position = Vector2.MoveTowards(rb.position,new Vector2(player.transform.position.x,rb.position.y),
-            moltiplicatoreDifficolta * velocitaNemico * Time.fixedDeltaTime);
+            velocitaNemico * Time.fixedDeltaTime);
 
             if(player.transform.position.x < transform.position.x){
             characterScale.x = -1.5f;
@@ -78,7 +77,11 @@ public class EnemyFight : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Bullet"){
-            TakeDamage(100);
+            TakeDamage(10);
+        }
+
+        if(other.gameObject.tag == "MitraBullet"){
+            TakeDamage(10);
         }
     }
 

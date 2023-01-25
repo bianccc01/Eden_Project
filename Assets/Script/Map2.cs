@@ -30,6 +30,8 @@ public class Map2 : MonoBehaviour
 
     // Update is called once per frame
     private void OnDisable() {
+
+        
         
         PlayerPrefs.SetFloat("PosizioneY",exp.transform.position.y);
         PlayerPrefs.SetFloat("PosizioneX",exp.transform.position.x);

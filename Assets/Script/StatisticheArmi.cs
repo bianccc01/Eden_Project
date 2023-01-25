@@ -14,18 +14,27 @@ public class StatisticheArmi : MonoBehaviour
 
 
 
+
+
     // Use this for initialization
 
 
     void Start()
     {
 
+        
         ammo = PlayerPrefs.GetInt("MunizioniPistola");
 
         
         // Accedo al componente testo del oggetto e uso il metodo SetText per impostare il testo
         Testo_Health = gameObject.GetComponent<TextMeshProUGUI>();
-        Testo_Health.SetText(ammo+"                                              "+ammo);
+        if(PlayerPrefs.GetInt("HasMitra") == 0)
+        {
+            Testo_Health.SetText(ammo+"");
+        }
+
+        else Testo_Health.SetText(ammo+"                                            "+ammo);
+        
 
     }
     // Update is called once per frame
