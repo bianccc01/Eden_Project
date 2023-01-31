@@ -16,6 +16,8 @@ public class EnemyFight : MonoBehaviour
     Rigidbody2D rb;
 
     Vector3 characterScale;
+
+    public GameObject box;
     
     
     // Start is called before the first frame update
@@ -69,6 +71,7 @@ public class EnemyFight : MonoBehaviour
         if(currentHealth == 0)
         {
             Destroy(gameObject);
+            box.SetActive(true);
             
             //SceneManager.LoadScene(8);
         
