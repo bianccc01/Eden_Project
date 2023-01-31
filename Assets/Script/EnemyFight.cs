@@ -69,7 +69,8 @@ public class EnemyFight : MonoBehaviour
         if(currentHealth == 0)
         {
             Destroy(gameObject);
-            SceneManager.LoadScene(8);
+            
+            //SceneManager.LoadScene(8);
         
         }
     }
