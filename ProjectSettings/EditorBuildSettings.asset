@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Story/Introduzione.3.unity
     guid: 255516e2a8f080e4f9829f0497842868
+  - enabled: 1
+    path: Assets/Scenes/Story/ToBeContinued.unity
+    guid: 462142c5e5b6dbb49a67d59bbd086f8c
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 585e0f75677a4dd4cb6fc2c677e2ae6c,
       type: 2}
