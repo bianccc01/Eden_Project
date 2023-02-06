@@ -6817,6 +6817,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8096920735691077052, guid: f79ea1442fdaebd46b2a38150e4e1e91,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1234287208, guid: 4cc7b6008ad744744b6825a5296081e1,
+        type: 3}
     - target: {fileID: 8096920735691077053, guid: f79ea1442fdaebd46b2a38150e4e1e91,
         type: 3}
       propertyPath: p1.x
@@ -7520,6 +7526,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8096920735691077052, guid: f79ea1442fdaebd46b2a38150e4e1e91,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1234287208, guid: 4cc7b6008ad744744b6825a5296081e1,
+        type: 3}
     - target: {fileID: 8096920735691077053, guid: f79ea1442fdaebd46b2a38150e4e1e91,
         type: 3}
       propertyPath: p1.x
@@ -8085,6 +8097,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8096920735691077052, guid: f79ea1442fdaebd46b2a38150e4e1e91,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1932958130, guid: 4cc7b6008ad744744b6825a5296081e1,
+        type: 3}
     - target: {fileID: 8096920735691077053, guid: f79ea1442fdaebd46b2a38150e4e1e91,
         type: 3}
       propertyPath: p1.x
@@ -8166,6 +8184,26 @@ MonoBehaviour:
   velocitaNemicoCamminata: 1
   velocitaNemicoInseguimento: 5
   time: 0
+--- !u!95 &1068614849
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068614847}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0f5d23958cf8d34daf4b99ad3c6f635, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1076010002
 GameObject:
   m_ObjectHideFlags: 0
