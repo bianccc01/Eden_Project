@@ -6149,7 +6149,7 @@ PrefabInstance:
     - target: {fileID: 80743896688646043, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
         type: 3}
       propertyPath: velocitaNemico
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2986163626965765666, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
         type: 3}
