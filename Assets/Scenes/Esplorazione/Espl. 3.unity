@@ -8001,8 +8001,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exp: {fileID: 331881649}
-  wolf1: {fileID: 0}
-  wolf2: {fileID: 0}
+  wolf1: {fileID: 729746808}
+  wolf2: {fileID: 346806040}
   wolf3: {fileID: 730351974}
   cow: {fileID: 686324290}
 --- !u!82 &1057282587

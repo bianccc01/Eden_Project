@@ -441,7 +441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &264813405
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5674,8 +5674,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player2: {fileID: 310317745}
-  velocitaNemico: 0
-  maxHealth: 200
+  velocitaNemico: 0.5
+  maxHealth: 100
   currentHealth: 5
   grounded: 0
   jumpamount: 80
@@ -5981,7 +5981,7 @@ PrefabInstance:
     - target: {fileID: 233663740394141445, guid: d0b500eecb32f9948aea8dfb777bd234,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.457
+      value: -13.04
       objectReference: {fileID: 0}
     - target: {fileID: 233663740394141445, guid: d0b500eecb32f9948aea8dfb777bd234,
         type: 3}

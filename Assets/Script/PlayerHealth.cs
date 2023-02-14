@@ -119,7 +119,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else 
         {
-            CurrentOx -= 0.005f;
+            CurrentOx -= 0.003f;
         }
     }
 
