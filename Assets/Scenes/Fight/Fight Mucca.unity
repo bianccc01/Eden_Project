@@ -5044,7 +5044,8 @@ MonoBehaviour:
   textComponent: {fileID: 837047553}
   lines:
   - "Ehi... cosa \xE8 quella cosa?"
-  - --Frugando nel cadavere della mucca mannara trovi un oggetto del mondo pre-crisi--
+  - '--Frugando nel cadavere della mucca mannara '
+  - trovi un oggetto del mondo pre-crisi--
   - "Questi oggetti valgono molto... come c'\xE8 finito nel suo stomaco?"
   - "Chiss\xE0 se riusciremo a riaccenderlo..."
   textSpeed: 0.1
@@ -6144,12 +6145,12 @@ PrefabInstance:
     - target: {fileID: 80743896688646043, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
         type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 80743896688646043, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
         type: 3}
       propertyPath: velocitaNemico
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2986163626965765666, guid: 284ede7ea554e2645b0fd5a04eb44fd6,
         type: 3}

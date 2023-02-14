@@ -20,28 +20,28 @@ public class InizializzazioniMappa : MonoBehaviour
         y=PlayerPrefs.GetFloat("PosizioneY");
         x=PlayerPrefs.GetFloat("PosizioneX");
 
-        if(PlayerPrefs.GetInt("Nemico") != 0)
+        if(PlayerPrefs.GetInt("Nemico1") == 1)
         exp.transform.position = new Vector2(x,y);
 
-        if(PlayerPrefs.GetInt("Nemico") == 3)
+        if(PlayerPrefs.GetInt("Nemico3") == 0)
         {
-            wolf3.SetActive(false);
+            wolf3.SetActive(true);
             PlayerPrefs.SetInt("CarneLupo",PlayerPrefs.GetInt("CarneLupo")+1);
         }
 
-        if(PlayerPrefs.GetInt("Nemico") == 2)
+        if(PlayerPrefs.GetInt("Nemico2") == 0)
         {
-            wolf2.SetActive(false);
+            wolf2.SetActive(true);
         }
 
-        if(PlayerPrefs.GetInt("Nemico") == 1)
+        if(PlayerPrefs.GetInt("Nemico1") == 0)
         {
-            wolf1.SetActive(false);
+            wolf1.SetActive(true);
         }
 
-        if(PlayerPrefs.GetInt("Nemico") == 4)
+        if(PlayerPrefs.GetInt("Nemico4") == 0)
         {
-            cow.SetActive(false);
+            cow.SetActive(true);
         }
        
     }

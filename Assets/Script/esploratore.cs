@@ -11,7 +11,6 @@ public class esploratore : MonoBehaviour
     public float moveSpeed = 0.1f;
     private Vector2 moveInput;
     //public DialogueScript Dialogo;
-    public Inventario inventario;
     public Animator animator;
 
     public GameObject box;
@@ -19,12 +18,6 @@ public class esploratore : MonoBehaviour
     public int canTalk;
 
     public bool interact;
-
-    
-    private void Awake()
-    {
-        inventario = new Inventario(9);
-    }
 
     
     // Start is called before the first frame update
@@ -73,25 +66,25 @@ public class esploratore : MonoBehaviour
             
             if(theCollision.gameObject.ToString() == "Enemy_explorer3 (UnityEngine.GameObject)")
             {
-                PlayerPrefs.SetInt("Nemico",3);
+                PlayerPrefs.SetInt("Nemico3",1);
                 SceneManager.LoadScene(9);
             }
 
             if(theCollision.gameObject.ToString() == "Enemy_explorer1 (UnityEngine.GameObject)")
             {
-                PlayerPrefs.SetInt("Nemico",1);
+                PlayerPrefs.SetInt("Nemico1",1);
                 SceneManager.LoadScene(9);
             }
 
             if(theCollision.gameObject.ToString() == "Enemy_explorer2 (UnityEngine.GameObject)")
             {
-                PlayerPrefs.SetInt("Nemico",2);
+                PlayerPrefs.SetInt("Nemico2",1);
                 SceneManager.LoadScene(9);
             }
 
             if(theCollision.gameObject.ToString() == "Enemy_explorer4 (UnityEngine.GameObject)")
             {
-                PlayerPrefs.SetInt("Nemico",4);
+                PlayerPrefs.SetInt("Nemico4",1);
                 SceneManager.LoadScene(6);
             }
             

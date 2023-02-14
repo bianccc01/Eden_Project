@@ -72,7 +72,7 @@ public class Narrazione3 : MonoBehaviour
         PlayerPrefs.SetFloat("PosizioneY", 15f);
         PlayerPrefs.SetFloat("PosizioneX", -20f);
 
-       PlayerPrefs.SetInt("Nemico",0);
+
 
        PlayerPrefs.SetInt("HasPistola",0);
        PlayerPrefs.SetInt("HasMitra",0);
@@ -80,6 +80,11 @@ public class Narrazione3 : MonoBehaviour
        PlayerPrefs.SetInt("CarneLupo",0);
 
        PlayerPrefs.SetInt("MunizioniPistola",20);
+
+       PlayerPrefs.SetInt("Nemico1",0);
+       PlayerPrefs.SetInt("Nemico2",0);
+       PlayerPrefs.SetInt("Nemico3",0);
+       PlayerPrefs.SetInt("Nemico4",0);
        
        SceneManager.LoadScene(5);
         }

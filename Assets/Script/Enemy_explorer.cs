@@ -55,12 +55,12 @@ public class Enemy_explorer : MonoBehaviour
 
             if (player.transform.position.x < transform.position.x)
             {
-                characterScale.x = 0.75f;
+                characterScale.x = -1.75f;
             }
 
             if (player.transform.position.x > transform.position.x)
             {
-                characterScale.x = -0.75f;
+                characterScale.x = 0.75f;
             }
 
             transform.localScale = characterScale;
@@ -118,15 +118,15 @@ public class Enemy_explorer : MonoBehaviour
 
     private void voltaNemico(float x, Vector2 p)
     {
-        if (x < p.x && characterScale.x == 0.75f)
+        if (x < p.x && characterScale.x == -1.75f)
         {
-            characterScale.x = -0.75f;
+            characterScale.x = 1.75f;
             transform.localScale = characterScale;
         }
 
-        if (x > p.x && characterScale.x == -0.75f)
+        if (x > p.x && characterScale.x == 1.75f)
         {
-            characterScale.x = 0.75f;
+            characterScale.x = -1.75f;
             transform.localScale = characterScale;
         }
     }

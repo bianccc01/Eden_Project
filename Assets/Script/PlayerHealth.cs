@@ -40,7 +40,6 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
         lifebar.SetMaxHealth(maxHealth);
         lifebar.SetCurrentHealth(currentHealth);
         OxBar.SetMaxHealth(MaxOx);
@@ -64,6 +63,10 @@ public class PlayerHealth : MonoBehaviour
 
         if(gameObject.scene.buildIndex != 5){
              LessOx();
+        }
+
+        if(currentHealth == 0f){
+            SceneManager.LoadScene(7);
         }
        
         RefreshMaxHealth();
